@@ -23,10 +23,15 @@ checks = {
     'Libellés HISTORIQUE_ES B / formules A': ('HISTORIQUE_ES', range(6, 286), ['A', 'B']),
     'Formules SUIVI_GRAISSAGE A,B,F': ('SUIVI_GRAISSAGE_SOUFFLAGE', range(6, 76), list('ABF')),
 }
+sys.path.insert(0, '/home/user/Suivi-pointage-2026/scripts')
+from registre import CORRECTIONS_DONNEES
+autorise = {(sh, ref): (avant, apres) for sh, ref, avant, apres, _ in CORRECTIONS_DONNEES}
 for lab, (sh, rows, cols) in checks.items():
     x, y = cells(wa[sh], rows, cols), cells(wb[sh], rows, cols)
     d = {k: (x[k], y[k]) for k in x if x[k] != y[k]}
-    rep['donnees_utilisateur'][lab] = {'cellules_comparees': len(x), 'non_vides': sum(v is not None for v in x.values()), 'differences': d}
+    ok = {k: v for k, v in d.items() if autorise.get((sh, k)) == v}
+    rep['donnees_utilisateur'][lab] = {'cellules_comparees': len(x), 'non_vides': sum(v is not None for v in x.values()),
+                                       'differences': {k: v for k, v in d.items() if k not in ok}, 'corrections_validees_appliquees': ok}
 rep['donnees_utilisateur']['feuilles_d_origine_presentes'] = all(n in wb.sheetnames for n in wa.sheetnames)
 nonempty_hist = sum(1 for r in range(6, 286) for c in range(3, 43) if wa['HISTORIQUE_ES'].cell(r, c).value is not None)
 rep['donnees_utilisateur']['HISTORIQUE_ES_cellules_saisies'] = nonempty_hist

@@ -124,8 +124,17 @@ run('T8', 'Seuil_Proche 20 → 30 : D11T5 (−21 h) passe Proche', lambda wb: wb
     [('J31', S('J31'), 'Proche'), ('KPI Proche', lambda v: v['SUIVI_ES']['C3'].value, lambda x: x > 4)])
 
 # T9 date d'historique saisie en texte
-run('T9', "Date d'historique saisie en texte → signalée", lambda wb: wb['HISTORIQUE_ES'].__setitem__('C15', '09/08/2025'),
-    [('Contrôles L8', Cc('L8'), "Date d'historique invalide")])
+run('T9', "Date d'historique saisie en texte → signalée (Port-Chars HP 21)", lambda wb: wb['HISTORIQUE_ES'].__setitem__('C7', '19/02/2026'),
+    [('Contrôles L6', Cc('L6'), "Date d'historique manquante ou invalide"), ('Total alertes', Cc('D3'), 2)])
+
+# T0 état livré : HP24 historique complété (décision Q1) -> SUIVI = HISTORIQUE ; date de l'ES 2 manquante signalée
+run('T0', 'État livré : HP24 SUIVI = HISTORIQUE après correction validée ; date manquante signalée', None,
+    [('Contrôles I8 (SUIVI ≠ HISTORIQUE)', Cc('I8'), None), ('Contrôles N8 (entrées)', Cc('N8'), 2), ('Contrôles O8:Q8', lambda v: [v['Contrôles'][f'{c}8'].value for c in 'OPQ'], [6236, 'ES 250 h', 1]),
+     ('Contrôles L8', Cc('L8'), "Date d'historique manquante ou invalide"), ('Total alertes', Cc('D3'), 1), ('KPI', KPI, [45, 37, 4, 4, 0, 5, 1])])
+
+# T15 saisie de la date manquante -> plus aucune alerte
+run('T15', "Saisie de la date de l'ES 2 de HP24 → 0 alerte", lambda wb: wb['HISTORIQUE_ES'].__setitem__('D15', dt.datetime(2026, 1, 15)),
+    [('Contrôles L8', Cc('L8'), None), ('Total alertes', Cc('D3'), 0), ('Tuile SUIVI_ES G3', S('G3'), 0)])
 
 # T10 doublon avec espace final
 run('T10', 'Nom en double avec espace final (« KOM2 »)', lambda wb: wb['SUIVI_ES'].__setitem__('A16', 'KOM2 '),

@@ -3,32 +3,51 @@
   "SUIVI_ES A:E,K,L (8-77)": {
    "cellules_comparees": 490,
    "non_vides": 333,
-   "differences": {}
+   "differences": {},
+   "corrections_validees_appliquees": {}
   },
   "HISTORIQUE_ES C:AP (6-285)": {
    "cellules_comparees": 11200,
    "non_vides": 28,
-   "differences": {}
+   "differences": {},
+   "corrections_validees_appliquees": {
+    "D14": [
+     null,
+     6236
+    ],
+    "D16": [
+     null,
+     "ES 250 h"
+    ],
+    "D17": [
+     null,
+     1
+    ]
+   }
   },
   "SUIVI_GRAISSAGE C:E,G (6-75)": {
    "cellules_comparees": 280,
    "non_vides": 1,
-   "differences": {}
+   "differences": {},
+   "corrections_validees_appliquees": {}
   },
   "HIST_GRAISSAGE C:BJ (6-215)": {
    "cellules_comparees": 12600,
    "non_vides": 0,
-   "differences": {}
+   "differences": {},
+   "corrections_validees_appliquees": {}
   },
   "Libellés HISTORIQUE_ES B / formules A": {
    "cellules_comparees": 560,
    "non_vides": 350,
-   "differences": {}
+   "differences": {},
+   "corrections_validees_appliquees": {}
   },
   "Formules SUIVI_GRAISSAGE A,B,F": {
    "cellules_comparees": 210,
    "non_vides": 210,
-   "differences": {}
+   "differences": {},
+   "corrections_validees_appliquees": {}
   },
   "feuilles_d_origine_presentes": true,
   "HISTORIQUE_ES_cellules_saisies": 28

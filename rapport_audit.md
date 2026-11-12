@@ -7,15 +7,23 @@
 | Sévérité | Constats | Corrigés | Atténués | Signalés (à vérifier) | Ouverts / non corrigés |
 |---|---|---|---|---|---|
 | **Critique** (résultats faux) | **0** | – | – | – | – |
-| **Majeur** (risque de résultats faux) | **7** | 3 (A07, A10, A11) | 1 (A01) | 2 (A02, A03) | 1 (A19) |
+| **Majeur** (risque de résultats faux) | **7** | 4 (A02*, A07, A10, A11) | 1 (A01) | 1 (A03) | 1 (A19) |
 | **Mineur** (hygiène) | **18** | 11 | 1 (A06) | 3 (A15, A17, A18) | 3 (A23 ouvert ; A24, A25 non corrigés) |
-| **Total** | **25** | **14** | **2** | **5** | **4** |
+| **Total** | **25** | **15** | **2** | **4** | **4** |
+
+\* A02 a été corrigé après la décision de l'utilisateur du 12/11/2026 (Q1 : la valeur SUIVI_ES est la bonne). Voir la mise à jour en fin de §1.
 
 - **Aucun résultat faux dans V1.1.** Le recalcul indépendant en Python des 50 engins (cible, écart, statut) et des 6 KPI donne **0 écart** avec le recalcul LibreOffice. Les risques viennent de la structure : liaison par position de ligne, paramètres en dur et masqués, intitulé trompeur, liste volatile, absence de contrôles.
 - **Baseline réconciliée.** V2 donne exactement les mêmes résultats que V1.1 : 50 engins, 45 en service, Normal 37, Proche 4, Dépassé 4, À confirmer 0, Hors service 5, 0 cellule en erreur. Sur 50 engins × 17 colonnes, **0 valeur diffère**. Seul l'intitulé de la colonne I change (A10).
-- **Aucune donnée utilisateur modifiée.** Nous avons comparé cellule par cellule les compteurs, les derniers ES, les états, les catégories, les noms et l'ordre des engins, les deux historiques et les saisies de graissage : 0 différence. L'original `SUIVI_ES_V1.1.xlsx` est intact (SHA-256 `9f58705c…a9bbb1`).
-- **16 scénarios sur 16 réussis**, tous exécutés sur des copies jetables.
-- **1 alerte active dans V2** : Arroseur HP24, « SUIVI ≠ HISTORIQUE » (A02). Ce conflit est signalé et n'a pas été tranché.
+- **Aucune donnée utilisateur modifiée sans validation.** Nous avons comparé cellule par cellule les compteurs, les derniers ES, les états, les catégories, les noms et l'ordre des engins, les deux historiques et les saisies de graissage : 0 différence, en dehors des 3 cellules ajoutées à l'historique de HP24 sur décision de l'utilisateur (voir la mise à jour ci-dessous). L'original `SUIVI_ES_V1.1.xlsx` est intact (SHA-256 `9f58705c…a9bbb1`).
+- **18 scénarios sur 18 réussis**, tous exécutés sur des copies jetables.
+- **1 alerte active dans V2** : Arroseur HP24, « Date d'historique manquante ou invalide ». La date de l'ES 2 ajouté est à compléter (voir la mise à jour ci-dessous).
+
+**Mise à jour du 12/11/2026 — décision Q1.** L'utilisateur a confirmé que la valeur SUIVI_ES d'Arroseur HP24 est la bonne (6 236 h, ES 250 h, cycle 1). L'historique était donc incomplet.
+- L'ES 2 manquant a été ajouté dans HISTORIQUE_ES : D14 = 6 236, D16 = ES 250 h, D17 = 1, recopiés de SUIVI_ES!C10:E10.
+- La date D15 reste vide, car elle est inconnue : aucune date n'a été inventée.
+- La feuille Contrôles signale désormais aussi une entrée d'historique sans date (J25). L'alerte « SUIVI ≠ HISTORIQUE » a disparu, remplacée par « Date d'historique manquante ou invalide » jusqu'à la saisie de D15 (test T15 : 0 alerte une fois la date saisie).
+- Ces 3 cellules sont les **seules** données modifiées par rapport à V1.1. Elles sont tracées dans le Journal (J24) et dans `scripts/registre.py` (`CORRECTIONS_DONNEES`), et le diff d'intégrité les vérifie une à une.
 - **Valeurs en cache : non livrées.** L'aller-retour par LibreOffice faisait perdre des éléments (§7). Nous livrons donc la version openpyxl, qui se recalcule à l'ouverture.
 
 ## 2. Baseline (étape 0)
@@ -57,7 +65,7 @@ Dépassé : HYSTER-1 (+58 h), TERX3 (+54 h), KOM1 (+43 h), Pelle hydraulique CX4
 | ID | Sév. | Feuille | Cellule / plage | Constat | Preuve | Correction | Statut |
 |---|---|---|---|---|---|---|---|
 | A01 | Majeur | SUIVI_ES ↔ 3 feuilles liées | HISTORIQUE_ES!A6:A282, SUIVI_GRAISSAGE!A/B/F6:75, HISTORIQUE_GRAISSAGE!A6:A213, L1 (HYPERLINK) | Les feuilles sont liées par position de ligne. Un tri, une insertion ou une suppression attribue l'historique et le graissage au mauvais engin, ou produit #REF!. | Simulation H1 (§3) | Aucune refonte, puisqu'il n'y a pas de résultat faux en usage normal. Mise en place : avertissement visible (SUIVI_ES ligne 5, aides A2/A3), règle dans le Mode d'emploi, contrôle « Ordre / liens des lignes » dans Contrôles (référence d'ordre figée + INDEX positionnel + test des liens), tri interdit par la protection. Testé par T12 (tri : 50 positions signalées), T13 (insertion : 38) et T14 (suppression : 49, Contrôles sans #REF!). | **Atténué** |
-| A02 | Majeur | SUIVI_ES / HISTORIQUE_ES | SUIVI_ES!C10:E10 vs HISTORIQUE_ES!C14:C17 | Conflit sur Arroseur HP24 : SUIVI 6 236 h / ES 250 h / 1 ; HISTORIQUE 6 007 h / 09/08/2025 / ES 2000 h / 8. | Valeurs lues dans les deux feuilles | Aucune donnée modifiée. Signalé dans Contrôles!I8 (« SUIVI ≠ HISTORIQUE ») et dans le total d'alertes (1). | **Signalé – à vérifier** (Q1) |
+| A02 | Majeur | SUIVI_ES / HISTORIQUE_ES | SUIVI_ES!C10:E10 vs HISTORIQUE_ES!C14:C17 | Conflit sur Arroseur HP24 : SUIVI 6 236 h / ES 250 h / 1 ; HISTORIQUE 6 007 h / 09/08/2025 / ES 2000 h / 8. | Valeurs lues dans les deux feuilles | Signalé dans Contrôles!I8. **Après la décision de l'utilisateur (Q1 : SUIVI juste)**, l'ES 2 manquant a été ajouté en HISTORIQUE_ES!D14, D16 et D17 ; la date D15, inconnue, est à saisir et elle est signalée. | **Corrigé** (décision utilisateur, J24) |
 | A03 | Majeur | HISTORIQUE_ES, HISTORIQUE_GRAISSAGE | tous les blocs | 47/50 engins n'ont aucun historique ES et l'historique de graissage est vide. Le contrôle SUIVI ↔ HISTORIQUE ne couvre donc que 3 engins. | 28 cellules saisies sur 11 200 ; 0 sur 12 600 | Contrôles affiche, pour chaque engin, le nombre d'entrées et le dernier ES historisé. | **Signalé** (Q2) |
 | A04 | Mineur | SUIVI_ES | L7:L77, AE7:AF19, colonnes L:AH | La colonne de saisie « Catégorie » et les paramètres (cycle, Marge, Interv_ES) sont masqués et en police Calibri. | Inventaire (colonnes masquées, verrouillage) | Feuille Paramètres visible ; L affichée en saisie avec la liste Liste_Categories ; AE:AF vidées et paramètres déplacés avec leurs commentaires. | **Corrigé** |
 | A05 | Mineur | SUIVI_ES | lignes 26, 30, 37, 38, 50 | Les 5 engins hors service sont masqués manuellement. Ils restent comptés de façon cohérente (A3+F3 = 50), mais deviennent invisibles. | `row_dimensions.hidden` | Lignes affichées. La MFC existante les grise ; le filtre de la colonne K sert à les masquer. | **Corrigé** |
@@ -71,7 +79,7 @@ Dépassé : HYSTER-1 (+58 h), TERX3 (+54 h), KOM1 (+43 h), Pelle hydraulique CX4
 | A13 | Mineur | SUIVI_ES | K8:K77 | Un état vide est compté « en service » sans aucun signal. | Test H7 (TERX4 → Normal) | Contrôles : « État non renseigné ». | **Corrigé** |
 | A14 | Mineur | SUIVI_ES / HISTORIQUE | A8:A77, L1 | Doublon avec espace final non détecté par la MFC (COUNTIF) ; la navigation va à la 1re occurrence. | Test H7 : « KOM2 » + espace → COUNTIF = 1 | Contrôles « Nom en double » (comparaison avec SUPPRESPACE). T10 réussi. | **Corrigé** |
 | A15 | Mineur | SUIVI_ES | A45:A47, A54 | Noms avec double espace (« Pay 600  W1/W2/W3 ») et retour à la ligne (« MANIPULATEUR(gieen 200)↵702612 (HELI) »). | Valeurs brutes | Aucune modification (données utilisateur). | **Signalé – à vérifier** (Q8) |
-| A16 | Mineur | HISTORIQUE_ES | lignes « Date » | Une date saisie en texte ou future n'était signalée que par une MFC, sans alerte consolidée. Aucun cas actuellement. | 7/7 dates valides | Contrôles « Date d'historique invalide ». T9 réussi. | **Corrigé** |
+| A16 | Mineur | HISTORIQUE_ES | lignes « Date » | Une date saisie en texte ou future n'était signalée que par une MFC, sans alerte consolidée. Aucun cas actuellement. | 7/7 dates valides | Contrôles « Date d'historique manquante ou invalide » : date en texte, date future, ou compteur saisi sans date (J25). T9 réussi. | **Corrigé** |
 | A17 | Mineur | HISTORIQUE_ES | C10:D11 (HP23) | 14 710 h le 03/09/2023 puis 15 077 h le 14/09/2023 : +367 h en 11 jours, alors que 264 h est le maximum physique. | Calcul (24 h × 11 j) | Aucune modification. | **Signalé – à vérifier** (Q6) |
 | A18 | Mineur | HISTORIQUE_ES | D6:E8 (Port-Chars HP 21) | ES 500 h réalisé à 6 281 h, soit 71 h après l'ES 250 h (6 210 h), pour un intervalle de 250 h. | Valeurs | Aucune modification. | **Signalé – à vérifier** (Q7) |
 | A19 | Majeur | Classeur | tout | Aucune valeur en cache (fichier openpyxl, `fullCalcOnLoad`) : les lecteurs sans moteur de calcul affichent des cellules calculées vides. | `data_only=True` : None partout | Aller-retour LibreOffice tenté puis rejeté pour pertes (§7). Le recalcul à l'ouverture d'Excel et de LibreOffice reste actif. | **Non corrigé** (risque résiduel R2) |
@@ -88,7 +96,7 @@ Dépassé : HYSTER-1 (+58 h), TERX3 (+54 h), KOM1 (+43 h), Pelle hydraulique CX4
 |---|---|---|
 | D1 | Original en lecture seule (`chmod 444`) ; travail dans `travail/` ; copie intacte `travail/V1.1_intact.xlsx` ; scripts dans `scripts/`. | Consigne. |
 | D2 | Aucun constat classé Critique. | 0 écart au recalcul indépendant ; aucun résultat faux en usage normal (protection active). |
-| D3 | Conflit A02 non tranché : signalé dans Contrôles et dans ce rapport. | Un conflit de données se signale, il ne se résout pas. |
+| D3 | Conflit A02 d'abord seulement signalé, puis résolu sur décision de l'utilisateur (Q1, 12/11/2026) : ES 2 ajouté dans l'historique, date laissée vide et signalée. | Un conflit se signale ; seul l'utilisateur le tranche. Aucune date n'est inventée. |
 | D4 | H1 : disposition conservée, protection conservée **sans mot de passe** ; seule l'option « Trier » passe à « interdit ». | Atténuation minimale ; un tri partiel restait possible sous protection et ne sert jamais ici (le filtre reste autorisé). |
 | D5 | Seuil_Proche = 20 h (valeur de V1.1) ; Longueur_cycle = NBVAL(Cycle_Types). | Aucune règle inventée : seules des constantes sont externalisées. |
 | D6 | Types_ES saisis dans Paramètres (4 types) ; Types_Historique = Types_ES + « Vidange exceptionnelle » ; contrôle de cohérence Cycle_Types ⊂ Types_ES. | Liste unique demandée. |
@@ -119,7 +127,9 @@ Dépassé : HYSTER-1 (+58 h), TERX3 (+54 h), KOM1 (+43 h), Pelle hydraulique CX4
 | T6b | Vidange exceptionnelle après le dernier ES | RÉUSSI | Pas de faux écart |
 | T7 | Marge 50 → 30 | RÉUSSI | F8 = 6 501 (+220) ; 0 ligne non conforme au recalcul Python ; légende actualisée |
 | T8 | Seuil_Proche 20 → 30 | RÉUSSI | D11T5 (−21 h) → Proche |
-| T9 | Date d'historique en texte | RÉUSSI | Contrôles!L8 signalé |
+| T9 | Date d'historique en texte (Port-Chars HP 21) | RÉUSSI | Contrôles!L6 signalé ; total d'alertes = 2 |
+| T0 | État livré après la correction Q1 | RÉUSSI | HP24 : SUIVI = HISTORIQUE (6 236 h / ES 250 h / 1), 2 entrées ; date manquante signalée ; total d'alertes = 1 ; KPI inchangés |
+| T15 | Saisie de la date de l'ES 2 de HP24 | RÉUSSI | 0 alerte (Contrôles et tuile SUIVI_ES!G3) |
 | T10 | Doublon avec espace final | RÉUSSI | Les 2 positions sont signalées |
 | T11 | Compteur < dernier ES | RÉUSSI | À confirmer + Contrôles!G9 |
 | T12 | Tri de SUIVI_ES (UNO) | RÉUSSI | 50 positions « Ordre des lignes modifié » |
@@ -128,7 +138,7 @@ Dépassé : HYSTER-1 (+58 h), TERX3 (+54 h), KOM1 (+43 h), Pelle hydraulique CX4
 
 ## 7. Intégrité V1.1 → V2 et valeurs en cache
 
-Les écarts ci-dessous sont tous **voulus** et journalisés (feuille « Journal des modifications », J01–J23) :
+Les écarts ci-dessous sont tous **voulus** et journalisés (feuille « Journal des modifications », J01–J25). Côté données, la seule différence est la correction validée de HP24 (HISTORIQUE_ES!D14, D16, D17 ; J24) :
 - **Validations SUIVI_ES** :
   - B8:C77 scindée en B et C, avec messages ;
   - D8:D77 pointe vers `=Types_ES` ;
@@ -162,11 +172,7 @@ Le livrable est donc la version openpyxl : **il se recalcule à l'ouverture dans
 
 ## 8. Questions ouvertes
 
-1. **Q1 — Arroseur HP24 (A02)** : quelle est la bonne valeur ?
-   - SUIVI : 6 236 h, ES 250 h, cycle 1. Elle est cohérente avec la suite 8 → 1 (+229 h).
-   - HISTORIQUE : 6 007 h, ES 2000 h, cycle 8, 09/08/2025.
-
-   Si SUIVI est juste, il manque l'ES 2 dans l'historique (date à retrouver).
+1. **Q1 — Arroseur HP24 (A02) : répondue le 12/11/2026.** La valeur SUIVI est la bonne, et l'ES 2 a été ajouté à l'historique. **Reste à fournir : la date de cet ES 2** (HISTORIQUE_ES!D15), réalisé à 6 236 h, donc après le 09/08/2025.
 2. **Q2 — Historiques (A03)** : faut-il reprendre l'historique papier des 47 engins sans historique ES et des graissages ? Sans cette reprise, le contrôle SUIVI ↔ HISTORIQUE ne protège que 3 engins.
 3. **Q3 — « Vidange exceptionnelle »** : fait-elle avancer ou réinitialiser le cycle ES, ou décale-t-elle la cible ? V2 l'ignore pour le cycle et pour la comparaison, comme V1.1.
 4. **Q4 — Seuils** : confirmer Seuil_Proche = 20 h (repris de V1.1, non documenté) et Marge = 50 h (« cahier des charges »).
@@ -204,7 +210,7 @@ Le livrable est donc la version openpyxl : **il se recalcule à l'ouverture dans
   | `20_reconciliation.py` | Réconciliation |
   | `30_integrite.py` | Diff d'intégrité |
   | `31_diff_allerretour.py` | Diff de l'aller-retour LibreOffice |
-  | `40_scenarios.py` | 16 tests |
+  | `40_scenarios.py` | 18 tests |
   | `50_rendu.py` | Rendus PDF et PNG |
   | `60_verification_finale.sh` | Chaîne complète sur le livrable |
   | `lo_uno.py`, `recalc_copy.sh` | Outils |

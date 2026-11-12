@@ -1,3 +1,4 @@
-données utilisateur modifiées : 0
+données utilisateur modifiées hors corrections validées : 0
+corrections validées par l utilisateur appliquées : {'D14': [None, 6236], 'D16': [None, 'ES 250 h'], 'D17': [None, 1]}
 formules non verrouillées : 0 | saisies verrouillées : 0 | feuilles protégées : 9 / 9
 logo : True | commentaires SUIVI_ES : ['I7', 'K7'] + Paramètres ['B16', 'B17']

@@ -17,11 +17,18 @@ from openpyxl.drawing.line import LineProperties
 from openpyxl.utils import get_column_letter as L
 
 sys.path.insert(0, '/home/user/Suivi-pointage-2026/scripts')
-from registre import MODIFICATIONS
+from registre import MODIFICATIONS, CORRECTIONS_DONNEES
 
 SRC, DST = sys.argv[1], sys.argv[2]
 wb = openpyxl.load_workbook(SRC)
 S = wb['SUIVI_ES']; H = wb['HISTORIQUE_ES']; G = wb['SUIVI_GRAISSAGE_SOUFFLAGE']; HG = wb['HISTORIQUE_GRAISSAGE_SOUFFLAGE']
+
+# corrections de données validées par l'utilisateur (registre.CORRECTIONS_DONNEES) — vérifie l'état d'origine avant d'écrire
+for sh, ref, avant, apres, motif in CORRECTIONS_DONNEES:
+    assert wb[sh][ref].value == avant, (sh, ref, wb[sh][ref].value, avant)
+    wb[sh][ref].value = apres
+# cohérence : la correction HP24 recopie exactement SUIVI_ES!C10:E10
+assert (S['A10'].value, S['C10'].value, S['D10'].value, S['E10'].value) == ('Arroseur HP24', H['D14'].value, H['D16'].value, H['D17'].value)
 
 # ---------------------------------------------------------------- styles
 ARIAL = 'Arial'
@@ -413,7 +420,7 @@ C.merge_cells('A4:R4')
 put(C, 'A4', "⚠ Ne pas trier, insérer ni supprimer de lignes dans les feuilles de suivi et d'historique (liaison par position). Colonnes S:W = calculs techniques (groupées).",
     Font(name=ARIAL, size=9, bold=True, color='9C0006'), fill('FDECEC'), LEFT, border=False)
 hdrs = ['N°', 'Ligne SUIVI_ES', 'Engin', 'État', 'Statut', 'Saisie incomplète ou invalide', 'Compteur < dernier ES', 'Type ≠ cycle',
-        'SUIVI ≠ HISTORIQUE', 'Nom en double', 'Ordre / liens des lignes', "Date d'historique invalide", 'Nb alertes',
+        'SUIVI ≠ HISTORIQUE', 'Nom en double', 'Ordre / liens des lignes', "Date d'historique manquante ou invalide", 'Nb alertes',
         'Nb entrées historique ES', 'Dernier ES historisé — Compteur', 'Dernier ES historisé — Type', 'Dernier ES historisé — N°',
         "Engin attendu (référence d'ordre)", 'Clé priorité (écart)', 'Rang priorité', 'Rang liste', 'Liste engins (compacte)', 'Position dernier ES historisé']
 for i, h in enumerate(hdrs, start=1):
@@ -444,7 +451,8 @@ for k in range(1, N_POS + 1):
               f'IF(IFERROR(INDEX(\'SUIVI_GRAISSAGE_SOUFFLAGE\'!$A$6:$A$75,$A{r})<>$C{r},TRUE),"Lien SUIVI_GRAISSAGE rompu",'
               f'IF(IFERROR(INDEX(\'HISTORIQUE_GRAISSAGE_SOUFFLAGE\'!$A$6:$A$215,3*$A{r}-2)<>$C{r},TRUE),"Lien HIST. GRAISSAGE rompu","")))))')
     f['L'] = (f'=IF($C{r}="","",IF(SUMPRODUCT(ISTEXT(INDEX({HR},4*$A{r}-2,0))+ISNUMBER(INDEX({HR},4*$A{r}-2,0))*'
-              f'(INDEX({HR},4*$A{r}-2,0)>TODAY()))>0,"Date d\'historique invalide",""))')
+              f'(INDEX({HR},4*$A{r}-2,0)>TODAY())+ISNUMBER(INDEX({HR},4*$A{r}-3,0))*(INDEX({HR},4*$A{r}-2,0)=""))>0,'
+              f'"Date d\'historique manquante ou invalide",""))')
     f['M'] = f'=IF(AND($C{r}="",$K{r}=""),"",SUMPRODUCT(--(LEN($F{r}:$L{r})>0)))'
     f['N'] = f'=IF($C{r}="","",COUNT(INDEX({HR},4*$A{r}-3,0)))'
     f['O'] = f'=IF(OR($W{r}="",$W{r}=0),"",INDEX({HR},4*$A{r}-3,$W{r}))'

@@ -11,7 +11,8 @@ echo "== 4. Réconciliation avec la baseline V1.1"; python3 scripts/20_reconcili
 echo "== 5. Intégrité V1.1 -> V2"; python3 scripts/30_integrite.py SUIVI_ES_V1.1.xlsx SUIVI_ES_V2.xlsx --json $OUT/integrite.json > /dev/null
 python3 -c "
 import json; d=json.load(open('$OUT/integrite.json'))
-print('données utilisateur modifiées :', sum(len(v['differences']) for v in d['donnees_utilisateur'].values() if isinstance(v, dict)))
+print('données utilisateur modifiées hors corrections validées :', sum(len(v['differences']) for v in d['donnees_utilisateur'].values() if isinstance(v, dict)))
+print('corrections validées par l utilisateur appliquées :', {k: v for x in d['donnees_utilisateur'].values() if isinstance(x, dict) for k, v in x.get('corrections_validees_appliquees', {}).items()})
 v=d['verrouillage']; print('formules non verrouillées :', len(v['formules_non_verrouillees']), '| saisies verrouillées :', len(v['saisies_verrouillees']), '| feuilles protégées :', sum(v['feuilles_protegees'].values()), '/', len(v['feuilles_protegees']))
 print('logo :', d['structure']['logo_sha256']['V1.1'] == d['structure']['logo_sha256']['V2'], '| commentaires SUIVI_ES :', d['structure']['SUIVI_ES']['commentaires']['V2'], '+ Paramètres', list(d['structure']['Paramètres_commentaires']))
 " | tee $OUT/integrite_resume.txt

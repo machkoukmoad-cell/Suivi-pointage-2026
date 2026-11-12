@@ -75,4 +75,19 @@ MODIFICATIONS = [
      "Livré sans valeurs en cache (recalcul complet à l'ouverture, fullCalcOnLoad). L'aller-retour LibreOffice testé pour stocker les valeurs a été rejeté : "
      "il perdait les couleurs du graphique et des onglets, des largeurs de colonnes, l'option « Interrompre si vrai » des MFC et les auteurs des commentaires.",
      "Règle : ne garder l'aller-retour que si le diff d'intégrité ne montre aucune perte.", "A19"),
+    ("J24", "HISTORIQUE_ES",
+     "Arroseur HP24 : ajout de l'ES 2 manquant en D14 (compteur 6 236 h), D16 (ES 250 h), D17 (N° 1), recopiés de SUIVI_ES!C10:E10. "
+     "Date D15 laissée vide (inconnue) : signalée dans Contrôles jusqu'à sa saisie.",
+     "Décision de l'utilisateur du 12/11/2026 (Q1) : la valeur SUIVI_ES est la bonne ; l'historique était incomplet.", "A02"),
+    ("J25", "Contrôles",
+     "Indicateur « Date d'historique invalide » étendu en « Date d'historique manquante ou invalide » : signale aussi une entrée d'historique ES "
+     "avec compteur saisi et date vide.", "Rappeler la date à compléter (J24).", "A02, A16"),
+]
+
+# Corrections de données VALIDÉES PAR L'UTILISATEUR (seules modifications de données autorisées) :
+# (feuille, cellule, valeur V1.1 attendue, nouvelle valeur, référence de décision)
+CORRECTIONS_DONNEES = [
+    ("HISTORIQUE_ES", "D14", None, 6236, "Q1 — décision utilisateur 12/11/2026 (SUIVI_ES!C10)"),
+    ("HISTORIQUE_ES", "D16", None, "ES 250 h", "Q1 — décision utilisateur 12/11/2026 (SUIVI_ES!D10)"),
+    ("HISTORIQUE_ES", "D17", None, 1, "Q1 — décision utilisateur 12/11/2026 (SUIVI_ES!E10)"),
 ]

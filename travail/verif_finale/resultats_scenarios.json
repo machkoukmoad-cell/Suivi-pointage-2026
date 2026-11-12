@@ -61,9 +61,21 @@
  },
  {
   "id": "T9",
-  "scenario": "Date d'historique saisie en texte → signalée",
+  "scenario": "Date d'historique saisie en texte → signalée (Port-Chars HP 21)",
   "resultat": "RÉUSSI",
-  "observations": "erreurs=0; Contrôles L8=\"Date d'historique invalide\""
+  "observations": "erreurs=0; Contrôles L6=\"Date d'historique manquante ou invalide\"; Total alertes=2"
+ },
+ {
+  "id": "T0",
+  "scenario": "État livré : HP24 SUIVI = HISTORIQUE après correction validée ; date manquante signalée",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; Contrôles I8 (SUIVI ≠ HISTORIQUE)=None; Contrôles N8 (entrées)=2; Contrôles O8:Q8=[6236, 'ES 250 h', 1]; Contrôles L8=\"Date d'historique manquante ou invalide\"; Total alertes=1; KPI=[45, 37, 4, 4, 0, 5, 1]"
+ },
+ {
+  "id": "T15",
+  "scenario": "Saisie de la date de l'ES 2 de HP24 → 0 alerte",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; Contrôles L8=None; Total alertes=0; Tuile SUIVI_ES G3=0"
  },
  {
   "id": "T10",
@@ -81,7 +93,7 @@
   "id": "T12",
   "scenario": "H1 : tri de SUIVI_ES → alertes « Ordre des lignes modifié »",
   "resultat": "RÉUSSI",
-  "observations": "erreurs=0; positions signalées=50; Total alertes=53"
+  "observations": "erreurs=0; positions signalées=50; Total alertes=54"
  },
  {
   "id": "T13",
@@ -93,6 +105,6 @@
   "id": "T14",
   "scenario": "H1 : suppression de ligne dans SUIVI_ES → alertes, Contrôles sans #REF!",
   "resultat": "RÉUSSI",
-  "observations": "erreurs classeur=5 (attendues hors Contrôles) ; erreurs dans Contrôles=0; Contrôles K7 (position 2)='Ordre des lignes modifié (attendu : HP23)'; positions signalées=49; Total alertes numérique=51"
+  "observations": "erreurs classeur=5 (attendues hors Contrôles) ; erreurs dans Contrôles=0; Contrôles K7 (position 2)='Ordre des lignes modifié (attendu : HP23)'; positions signalées=49; Total alertes numérique=52"
  }
 ]
