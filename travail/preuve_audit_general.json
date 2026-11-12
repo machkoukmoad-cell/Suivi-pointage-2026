@@ -1,0 +1,151 @@
+{
+ "coherence_formules": {},
+ "coherence_formules_ok": [
+  "SUIVI_ES!F8:F77",
+  "SUIVI_ES!G8:G77",
+  "SUIVI_ES!H8:H77",
+  "SUIVI_ES!I8:I77",
+  "SUIVI_ES!J8:J77",
+  "SUIVI_ES!M8:M77",
+  "SUIVI_ES!N8:N77",
+  "SUIVI_ES!O8:O77",
+  "SUIVI_ES!P8:P77",
+  "SUIVI_ES!Q8:Q77"
+ ],
+ "nombres_texte_ou_dates_invalides": [],
+ "formats_date_HISTORIQUE_ES": {
+  "dd/mm/yyyy": 2800
+ },
+ "formats_date_GRAISS_C": [
+  "dd/mm/yyyy"
+ ],
+ "formats_date_HG": [
+  "dd/mm/yyyy"
+ ],
+ "noms_espaces": [
+  [
+   45,
+   "Pay 600  W1"
+  ],
+  [
+   46,
+   "Pay 600  W2"
+  ],
+  [
+   47,
+   "Pay 600  W3"
+  ],
+  [
+   54,
+   "MANIPULATEUR(gieen 200)\n702612 (HELI)"
+  ]
+ ],
+ "noms_doublons_normalises": [],
+ "nb_engins": 50,
+ "recalcul_independant_ecarts": [],
+ "kpi_python": {
+  "en_service": 45,
+  "Normal": 37,
+  "Hors service": 5,
+  "Dépassé": 4,
+  "Proche": 4
+ },
+ "kpi_LO_A3F3": {
+  "en_service": 45,
+  "Normal": 37,
+  "Proche": 4,
+  "Dépassé": 4,
+  "À confirmer": 0,
+  "Hors service": 5
+ },
+ "lignes_masquees": [
+  [
+   26,
+   "Mini CH CASE W1",
+   "Hors service"
+  ],
+  [
+   30,
+   "D11T4",
+   "Hors service"
+  ],
+  [
+   37,
+   "D9R7",
+   "Hors service"
+  ],
+  [
+   38,
+   "D9R8",
+   "Hors service"
+  ],
+  [
+   50,
+   "Pelleteuse W1 (JOHN DEERE)",
+   "Hors service"
+  ]
+ ],
+ "statuts_lignes_visibles": {
+  "Normal": 37,
+  "Dépassé": 4,
+  "Proche": 4
+ },
+ "H2_resume": {
+  "historique_vide": 47,
+  "OK": [
+   [
+    8,
+    "Port-Chars HP 21",
+    "OK",
+    [
+     6281,
+     "ES 500 h",
+     2
+    ],
+    [
+     "ES 3",
+     6281,
+     "2026-10-12 00:00:00",
+     "ES 500 h",
+     2
+    ]
+   ],
+   [
+    9,
+    "HP23",
+    "OK",
+    [
+     15313,
+     "ES 500 h",
+     2
+    ],
+    [
+     "ES 3",
+     15313,
+     "2023-10-10 00:00:00",
+     "ES 500 h",
+     2
+    ]
+   ]
+  ],
+  "ECART": [
+   [
+    10,
+    "Arroseur HP24",
+    "ÉCART",
+    [
+     6236,
+     "ES 250 h",
+     1
+    ],
+    [
+     "ES 1",
+     6007,
+     "2025-08-09 00:00:00",
+     "ES 2000 h",
+     8
+    ]
+   ]
+  ]
+ }
+}

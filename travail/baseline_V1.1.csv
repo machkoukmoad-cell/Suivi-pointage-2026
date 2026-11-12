@@ -1,0 +1,52 @@
+ligne;Engin;Compteur actuel;Dernier ES — Compteur;Dernier ES — Type;Dernier ES — N° cycle;Prochain ES — Compteur cible;Prochain ES — Type;Prochain ES — N° cycle;Heures restantes;Statut;État de l'engin;Catégorie;Contrôle saisie;Cycle suivant;Type suivant;Intervalle ES (h);Cible (num)
+8;Port-Chars HP 21;6309;6281;ES 500 h;2;6481;ES 250 h;3;-172;Normal;En service;Camions;OK;3;ES 250 h;250;6481
+9;HP23;15416;15313;ES 500 h;2;15513;ES 250 h;3;-97;Normal;En service;Camions;OK;3;ES 250 h;250;15513
+10;Arroseur HP24;6382;6236;ES 250 h;1;6436;ES 500 h;2;-54;Normal;En service;Camions;OK;2;ES 500 h;250;6436
+11;UR131;62520;62356;ES 500 h;2;62556;ES 250 h;3;-36;Normal;En service;Camions;OK;3;ES 250 h;250;62556
+12;UR132;66011;66003;ES 500 h;6;66203;ES 250 h;7;-192;Normal;En service;Camions;OK;7;ES 250 h;250;66203
+13;Arroseur CAT;14840;14761;ES 500 h;2;14961;ES 250 h;3;-121;Normal;En service;Camions;OK;3;ES 250 h;250;14961
+14;Camion. Approvision Volvo;11688;11512;ES 250 h;3;11712;ES 1000 h;4;-24;Normal;En service;Camions;OK;4;ES 1000 h;250;11712
+15;Camion. Ravitaillement CAT;18342;18342;ES 500 h;6;18542;ES 250 h;7;-200;Normal;En service;Camions;OK;7;ES 250 h;250;18542
+16;TERX1;34277;34172;ES 2000 h;8;34372;ES 250 h;1;-95;Normal;En service;Camions;OK;1;ES 250 h;250;34372
+17;TERX2;2309;2192;ES 1000 h;4;2392;ES 250 h;5;-83;Normal;En service;Camions;OK;5;ES 250 h;250;2392
+18;TERX3;25298;25044;ES 2000 h;8;25244;ES 250 h;1;54;Dépassé;En service;Camions;OK;1;ES 250 h;250;25244
+19;TERX4;35048;35013;ES 500 h;6;35213;ES 250 h;7;-165;Normal;En service;Camions;OK;7;ES 250 h;250;35213
+20;KOM1;19394;19151;ES 1000 h;4;19351;ES 250 h;5;43;Dépassé;En service;Camions;OK;5;ES 250 h;250;19351
+21;KOM2;4419;4419;ES 500 h;2;4619;ES 250 h;3;-200;Normal;En service;Camions;OK;3;ES 250 h;250;4619
+22;KOM3;15009;14996;ES 250 h;7;15196;ES 2000 h;8;-187;Normal;En service;Camions;OK;8;ES 2000 h;250;15196
+23;CH994F1;53620;53620;ES 250 h;5;53820;ES 500 h;6;-200;Normal;En service;Chargeuses;OK;6;ES 500 h;250;53820
+24;CH994F2;55165;54965;ES 250 h;1;55165;ES 500 h;2;0;Proche;En service;Chargeuses;OK;2;ES 500 h;250;55165
+25;CH992K;20305;20133;ES 250 h;1;20333;ES 500 h;2;-28;Normal;En service;Chargeuses;OK;2;ES 500 h;250;20333
+26;Mini CH CASE W1;;;;;—;—;—;—;Hors service;Hors service;Chargeuses;Non renseigné;;;;
+27;Mini CH CASE W2;7493;7476;ES 250 h;7;7676;ES 2000 h;8;-183;Normal;En service;Chargeuses;OK;8;ES 2000 h;250;7676
+28;D11T1;43395;43395;ES 500 h;6;43595;ES 250 h;7;-200;Normal;En service;Bulldozers;OK;7;ES 250 h;250;43595
+29;D11T3;50315;50287;ES 500 h;6;50487;ES 250 h;7;-172;Normal;En service;Bulldozers;OK;7;ES 250 h;250;50487
+30;D11T4;;;;;—;—;—;—;Hors service;Hors service;Bulldozers;Non renseigné;;;;
+31;D11T5;45667;45488;ES 500 h;6;45688;ES 250 h;7;-21;Normal;En service;Bulldozers;OK;7;ES 250 h;250;45688
+32;D11T6;46680;46562;ES 2000 h;8;46762;ES 250 h;1;-82;Normal;En service;Bulldozers;OK;1;ES 250 h;250;46762
+33;D11T7;37798;37798;ES 1000 h;4;37998;ES 250 h;5;-200;Normal;En service;Bulldozers;OK;5;ES 250 h;250;37998
+34;D9R2;34582;34494;ES 2000 h;8;34694;ES 250 h;1;-112;Normal;En service;Bulldozers;OK;1;ES 250 h;250;34694
+35;D9R5;30069;29929;ES 2000 h;8;30129;ES 250 h;1;-60;Normal;En service;Bulldozers;OK;1;ES 250 h;250;30129
+36;D9R6;32986;32958;ES 250 h;5;33158;ES 500 h;6;-172;Normal;En service;Bulldozers;OK;6;ES 500 h;250;33158
+37;D9R7;;;;;—;—;—;—;Hors service;Hors service;Bulldozers;Non renseigné;;;;
+38;D9R8;;;;;—;—;—;—;Hors service;Hors service;Bulldozers;Non renseigné;;;;
+39;D9R9;25265;25093;ES 1000 h;4;25293;ES 250 h;5;-28;Normal;En service;Bulldozers;OK;5;ES 250 h;250;25293
+40;D9R10;17422;17246;ES 500 h;2;17446;ES 250 h;3;-24;Normal;En service;Bulldozers;OK;3;ES 250 h;250;17446
+41;D9R11;34655;34491;ES 500 h;6;34691;ES 250 h;7;-36;Normal;En service;Bulldozers;OK;7;ES 250 h;250;34691
+42;DKS;1361;1304;ES 250 h;3;1504;ES 1000 h;4;-143;Normal;En service;Sondeuses;OK;4;ES 1000 h;250;1504
+43;SKF 2;21831;21764;ES 250 h;5;21964;ES 500 h;6;-133;Normal;En service;Sondeuses;OK;6;ES 500 h;250;21964
+44;Pelle hydraulique (Poclain)CX470B;2389;2163;ES 250 h;3;2363;ES 1000 h;4;26;Dépassé;En service;Engins de servitude;OK;4;ES 1000 h;250;2363
+45;Pay 600  W1;11848;11680;ES 250 h;5;11880;ES 500 h;6;-32;Normal;En service;Engins de servitude;OK;6;ES 500 h;250;11880
+46;Pay 600  W2;9620;9512;ES 500 h;6;9712;ES 250 h;7;-92;Normal;En service;Engins de servitude;OK;7;ES 250 h;250;9712
+47;Pay 600  W3;9040;9011;ES 250 h;5;9211;ES 500 h;6;-171;Normal;En service;Engins de servitude;OK;6;ES 500 h;250;9211
+48;Niv 7 CAT;12343;12148;ES 500 h;6;12348;ES 250 h;7;-5;Proche;En service;Engins de servitude;OK;7;ES 250 h;250;12348
+49;Niv 8 CAT;3931;3732;ES 250 h;5;3932;ES 500 h;6;-1;Proche;En service;Engins de servitude;OK;6;ES 500 h;250;3932
+50;Pelleteuse W1 (JOHN DEERE);;3017;ES 500 h;2;—;—;—;—;Hors service;Hors service;Engins de servitude;OK;3;ES 250 h;250;3217
+51;Pelleteuse W2 (JOHN DEERE);7176;6994;ES 2000 h;8;7194;ES 250 h;1;-18;Proche;En service;Engins de servitude;OK;1;ES 250 h;250;7194
+52;HYSTER-1 (760886);7580;7322;ES 500 h;2;7522;ES 250 h;3;58;Dépassé;En service;Engins de servitude;OK;3;ES 250 h;250;7522
+53;HYSTER-2 (000106);6828;6828;ES 250 h;3;7028;ES 1000 h;4;-200;Normal;En service;Engins de servitude;OK;4;ES 1000 h;250;7028
+54;"MANIPULATEUR(gieen 200)
+702612 (HELI)";2616;2571;ES 1000 h;4;2771;ES 250 h;5;-155;Normal;En service;Engins de servitude;OK;5;ES 250 h;250;2771
+55;HELI100;2411;2411;ES 500 h;6;2611;ES 250 h;7;-200;Normal;En service;Engins de servitude;OK;7;ES 250 h;250;2611
+56;Magni;1488;1488;ES 250 h;5;1688;ES 500 h;6;-200;Normal;En service;Engins de servitude;OK;6;ES 500 h;250;1688
+57;HELI 15T;459;459;ES 250 h;3;659;ES 1000 h;4;-200;Normal;En service;Engins de servitude;OK;4;ES 1000 h;250;659

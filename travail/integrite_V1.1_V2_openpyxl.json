@@ -1,0 +1,548 @@
+{
+ "donnees_utilisateur": {
+  "SUIVI_ES A:E,K,L (8-77)": {
+   "cellules_comparees": 490,
+   "non_vides": 333,
+   "differences": {}
+  },
+  "HISTORIQUE_ES C:AP (6-285)": {
+   "cellules_comparees": 11200,
+   "non_vides": 28,
+   "differences": {}
+  },
+  "SUIVI_GRAISSAGE C:E,G (6-75)": {
+   "cellules_comparees": 280,
+   "non_vides": 1,
+   "differences": {}
+  },
+  "HIST_GRAISSAGE C:BJ (6-215)": {
+   "cellules_comparees": 12600,
+   "non_vides": 0,
+   "differences": {}
+  },
+  "Libellés HISTORIQUE_ES B / formules A": {
+   "cellules_comparees": 560,
+   "non_vides": 350,
+   "differences": {}
+  },
+  "Formules SUIVI_GRAISSAGE A,B,F": {
+   "cellules_comparees": 210,
+   "non_vides": 210,
+   "differences": {}
+  },
+  "feuilles_d_origine_presentes": true,
+  "HISTORIQUE_ES_cellules_saisies": 28
+ },
+ "structure": {
+  "SUIVI_ES": {
+   "validations": {
+    "V1.1": 4,
+    "V2": 6,
+    "retirees": [
+     [
+      "B8:C77",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      false,
+      null
+     ],
+     [
+      "D8:D77",
+      "list",
+      "\"ES 250 h,ES 500 h,ES 1000 h,ES 2000 h\"",
+      null,
+      null,
+      false,
+      null
+     ],
+     [
+      "E8:E77",
+      "whole",
+      "1",
+      "8",
+      null,
+      true,
+      "N° de cycle (1 à 8)"
+     ]
+    ],
+    "ajoutees": [
+     [
+      "B8:B77",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      true,
+      "Compteur actuel (h)"
+     ],
+     [
+      "C8:C77",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      true,
+      "Dernier ES — compteur (h)"
+     ],
+     [
+      "D8:D77",
+      "list",
+      "=Types_ES",
+      null,
+      null,
+      true,
+      "Dernier ES — Type"
+     ],
+     [
+      "E8:E77",
+      "whole",
+      "1",
+      "Longueur_cycle",
+      null,
+      true,
+      "N° de cycle (1 à 8, voir Paramètres)"
+     ],
+     [
+      "L8:L77",
+      "list",
+      "=Liste_Categories",
+      null,
+      "warning",
+      true,
+      "Catégorie"
+     ]
+    ]
+   },
+   "mfc": {
+    "V1.1": 17,
+    "V2": 19,
+    "retirees": [
+     "I8:I77 AND(ISNUMBER($I8),$I8<-20)",
+     "I8:I77 AND(ISNUMBER($I8),$I8>=-20,$I8<=0)"
+    ],
+    "ajoutees": [
+     "G3 $G$3=0",
+     "I8:I77 AND(ISNUMBER($I8),$I8<-Seuil_Proche)",
+     "I8:I77 AND(ISNUMBER($I8),$I8>=-Seuil_Proche,$I8<=0)",
+     "M8:M77 AND($A8<>\"\",$K8<>\"Hors service\",$M8<>\"OK\")"
+    ]
+   },
+   "fusions": {
+    "V1.1": 5,
+    "V2": 9,
+    "retirees": [
+     "A1:K1"
+    ],
+    "ajoutees": [
+     "A1:M1",
+     "A4:M4",
+     "A5:M5",
+     "L6:M6",
+     "N6:Q6"
+    ]
+   },
+   "volets": [
+    "B8",
+    "B8"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": false,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    1,
+    1
+   ],
+   "commentaires": {
+    "V1.1": [
+     "AF17",
+     "AF18",
+     "I7",
+     "K7"
+    ],
+    "V2": [
+     "I7",
+     "K7"
+    ],
+    "texte_modifie": [
+     "I7"
+    ]
+   },
+   "filtre": [
+    "A7:K77",
+    "A7:M77"
+   ],
+   "titres_impression": [
+    [
+     "$6:$7",
+     null
+    ],
+    [
+     "$6:$7",
+     null
+    ]
+   ]
+  },
+  "HISTORIQUE_ES": {
+   "validations": {
+    "V1.1": 5,
+    "V2": 5,
+    "retirees": [
+     [
+      "C8:AP8 C12:AP12 C16:AP16 C20:AP20 C24:AP24 C28:AP28 C32:AP32 C36:AP36 C40:AP40 C44:AP44 C48:AP48 C52:AP52 C56:AP56 C60:AP60 C64:AP64 C68:AP68 C72:AP72 C76:AP76 C80:AP80 C84:AP84 C88:AP88 C92:AP92 C96:AP96 C100:AP100 C104:AP104 C108:AP108 C112:AP112 C116:AP116 C120:AP120 C124:AP124 C128:AP128 C132:AP132 C136:AP136 C140:AP140 C144:AP144 C148:AP148 C152:AP152 C156:AP156 C160:AP160 C164:AP164 C168:AP168 C172:AP172 C176:AP176 C180:AP180 C184:AP184 C188:AP188 C192:AP192 C196:AP196 C200:AP200 C204:AP204 C208:AP208 C212:AP212 C216:AP216 C220:AP220 C224:AP224 C228:AP228 C232:AP232 C236:AP236 C240:AP240 C244:AP244 C248:AP248 C252:AP252 C256:AP256 C260:AP260 C264:AP264 C268:AP268 C272:AP272 C276:AP276 C280:AP280 C284:AP284",
+      "list",
+      "\"ES 250 h,ES 500 h,ES 1000 h,ES 2000 h,Vidange exceptionnelle\"",
+      null,
+      null,
+      false,
+      null
+     ],
+     [
+      "C9:AP9 C13:AP13 C17:AP17 C21:AP21 C25:AP25 C29:AP29 C33:AP33 C37:AP37 C41:AP41 C45:AP45 C49:AP49 C53:AP53 C57:AP57 C61:AP61 C65:AP65 C69:AP69 C73:AP73 C77:AP77 C81:AP81 C85:AP85 C89:AP89 C93:AP93 C97:AP97 C101:AP101 C105:AP105 C109:AP109 C113:AP113 C117:AP117 C121:AP121 C125:AP125 C129:AP129 C133:AP133 C137:AP137 C141:AP141 C145:AP145 C149:AP149 C153:AP153 C157:AP157 C161:AP161 C165:AP165 C169:AP169 C173:AP173 C177:AP177 C181:AP181 C185:AP185 C189:AP189 C193:AP193 C197:AP197 C201:AP201 C205:AP205 C209:AP209 C213:AP213 C217:AP217 C221:AP221 C225:AP225 C229:AP229 C233:AP233 C237:AP237 C241:AP241 C245:AP245 C249:AP249 C253:AP253 C257:AP257 C261:AP261 C265:AP265 C269:AP269 C273:AP273 C277:AP277 C281:AP281 C285:AP285",
+      "whole",
+      "1",
+      "8",
+      null,
+      false,
+      null
+     ]
+    ],
+    "ajoutees": [
+     [
+      "C8:AP8 C12:AP12 C16:AP16 C20:AP20 C24:AP24 C28:AP28 C32:AP32 C36:AP36 C40:AP40 C44:AP44 C48:AP48 C52:AP52 C56:AP56 C60:AP60 C64:AP64 C68:AP68 C72:AP72 C76:AP76 C80:AP80 C84:AP84 C88:AP88 C92:AP92 C96:AP96 C100:AP100 C104:AP104 C108:AP108 C112:AP112 C116:AP116 C120:AP120 C124:AP124 C128:AP128 C132:AP132 C136:AP136 C140:AP140 C144:AP144 C148:AP148 C152:AP152 C156:AP156 C160:AP160 C164:AP164 C168:AP168 C172:AP172 C176:AP176 C180:AP180 C184:AP184 C188:AP188 C192:AP192 C196:AP196 C200:AP200 C204:AP204 C208:AP208 C212:AP212 C216:AP216 C220:AP220 C224:AP224 C228:AP228 C232:AP232 C236:AP236 C240:AP240 C244:AP244 C248:AP248 C252:AP252 C256:AP256 C260:AP260 C264:AP264 C268:AP268 C272:AP272 C276:AP276 C280:AP280 C284:AP284",
+      "list",
+      "=Types_Historique",
+      null,
+      null,
+      false,
+      null
+     ],
+     [
+      "C9:AP9 C13:AP13 C17:AP17 C21:AP21 C25:AP25 C29:AP29 C33:AP33 C37:AP37 C41:AP41 C45:AP45 C49:AP49 C53:AP53 C57:AP57 C61:AP61 C65:AP65 C69:AP69 C73:AP73 C77:AP77 C81:AP81 C85:AP85 C89:AP89 C93:AP93 C97:AP97 C101:AP101 C105:AP105 C109:AP109 C113:AP113 C117:AP117 C121:AP121 C125:AP125 C129:AP129 C133:AP133 C137:AP137 C141:AP141 C145:AP145 C149:AP149 C153:AP153 C157:AP157 C161:AP161 C165:AP165 C169:AP169 C173:AP173 C177:AP177 C181:AP181 C185:AP185 C189:AP189 C193:AP193 C197:AP197 C201:AP201 C205:AP205 C209:AP209 C213:AP213 C217:AP217 C221:AP221 C225:AP225 C229:AP229 C233:AP233 C237:AP237 C241:AP241 C245:AP245 C249:AP249 C253:AP253 C257:AP257 C261:AP261 C265:AP265 C269:AP269 C273:AP273 C277:AP277 C281:AP281 C285:AP285",
+      "whole",
+      "1",
+      "Longueur_cycle",
+      null,
+      false,
+      null
+     ]
+    ]
+   },
+   "mfc": {
+    "V1.1": 14,
+    "V2": 14,
+    "retirees": [
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-"
+    ],
+    "ajoutees": [
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-"
+    ]
+   },
+   "fusions": {
+    "V1.1": 78,
+    "V2": 78,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "C6",
+    "C6"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": false,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    null,
+    null
+   ],
+   "titres_impression": [
+    [
+     "$5:$5",
+     "$A:$B"
+    ],
+    [
+     "$5:$5",
+     "$A:$B"
+    ]
+   ]
+  },
+  "SUIVI_GRAISSAGE_SOUFFLAGE": {
+   "validations": {
+    "V1.1": 4,
+    "V2": 4,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "mfc": {
+    "V1.1": 7,
+    "V2": 7,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "fusions": {
+    "V1.1": 5,
+    "V2": 5,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "B6",
+    "B6"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": false,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    "A5:G75",
+    "A5:G75"
+   ],
+   "titres_impression": [
+    [
+     "$4:$5",
+     null
+    ],
+    [
+     "$4:$5",
+     null
+    ]
+   ]
+  },
+  "HISTORIQUE_GRAISSAGE_SOUFFLAGE": {
+   "validations": {
+    "V1.1": 4,
+    "V2": 4,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "mfc": {
+    "V1.1": 3,
+    "V2": 3,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "fusions": {
+    "V1.1": 74,
+    "V2": 74,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "C6",
+    "C6"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": false,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    null,
+    null
+   ],
+   "titres_impression": [
+    [
+     "$5:$5",
+     "$A:$B"
+    ],
+    [
+     "$5:$5",
+     "$A:$B"
+    ]
+   ]
+  },
+  "Paramètres_commentaires": {
+   "B16": "Marge de 50 h (cahier des charges), retranchée une seule foi",
+   "B17": "250 h entre deux ES consécutifs, quel que soit le type (8 × "
+  },
+  "logo_sha256": {
+   "V1.1": {
+    "xl/media/image1.png": "d43517cd0d6491bf"
+   },
+   "V2": {
+    "xl/media/image1.png": "d43517cd0d6491bf"
+   }
+  },
+  "logo_ancrage": [
+   [
+    "OneCellAnchor",
+    0,
+    0,
+    298,
+    162
+   ]
+  ],
+  "noms_definis": {
+   "V1.1": {
+    "Engins_Plage": "SUIVI_ES!$A$8:$A$77",
+    "Liste_Engins": "OFFSET(SUIVI_ES!$A$8,0,0,MAX(1,COUNTA(SUIVI_ES!$A$8:$A$77)),1)",
+    "Cycle_Types": "SUIVI_ES!$AF$8:$AF$15",
+    "Marge": "SUIVI_ES!$AF$17",
+    "Interv_ES": "SUIVI_ES!$AF$18"
+   },
+   "V2": {
+    "Engins_Plage": "SUIVI_ES!$A$8:$A$77",
+    "Cycle_Types": "'Paramètres'!$B$5:$B$12",
+    "Longueur_cycle": "'Paramètres'!$B$13",
+    "Marge": "'Paramètres'!$B$16",
+    "Interv_ES": "'Paramètres'!$B$17",
+    "Seuil_Proche": "'Paramètres'!$B$19",
+    "Types_ES": "'Paramètres'!$B$23:$B$26",
+    "Types_Historique": "'Paramètres'!$B$23:$B$27",
+    "Type_Hors_Cycle": "'Paramètres'!$B$27",
+    "Nb_Categories": "'Paramètres'!$B$38",
+    "Liste_Categories": "'Paramètres'!$B$30:INDEX('Paramètres'!$B$30:$B$37,MAX(1,'Paramètres'!$B$38))",
+    "Controle_Parametres": "'Paramètres'!$B$44",
+    "Liste_Engins": "'Contrôles'!$V$6:INDEX('Contrôles'!$V$6:$V$75,MAX(1,COUNT('Contrôles'!$U$6:$U$75)))",
+    "Total_Alertes": "'Contrôles'!$D$3"
+   }
+  }
+ },
+ "verrouillage": {
+  "cellules_formule": 2793,
+  "formules_non_verrouillees": [],
+  "saisies_verrouillees": [],
+  "HISTORIQUE_ES_saisies_verrouillees": 0,
+  "feuilles_protegees": {
+   "Mode d'emploi": true,
+   "Tableau de bord": true,
+   "SUIVI_ES": true,
+   "SUIVI_GRAISSAGE_SOUFFLAGE": true,
+   "HISTORIQUE_ES": true,
+   "HISTORIQUE_GRAISSAGE_SOUFFLAGE": true,
+   "Contrôles": true,
+   "Paramètres": true,
+   "Journal des modifications": true
+  },
+  "mot_de_passe": {
+   "Mode d'emploi": null,
+   "Tableau de bord": null,
+   "SUIVI_ES": null,
+   "SUIVI_GRAISSAGE_SOUFFLAGE": null,
+   "HISTORIQUE_ES": null,
+   "HISTORIQUE_GRAISSAGE_SOUFFLAGE": null,
+   "Contrôles": null,
+   "Paramètres": null,
+   "Journal des modifications": null
+  }
+ }
+}
