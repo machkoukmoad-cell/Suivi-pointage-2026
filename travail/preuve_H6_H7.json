@@ -1,0 +1,117 @@
+{
+ "compteur < dernier ES (62000 < 62356)": {
+  "A11": "UR131",
+  "B11": 62000,
+  "C11": 62356,
+  "D11": "ES 500 h",
+  "E11": 2,
+  "F11": 62556,
+  "I11": "À confirmer",
+  "J11": "À confirmer",
+  "K11": "En service",
+  "M11": "OK"
+ },
+ "N° cycle hors 1–8 (9)": {
+  "A12": "UR132",
+  "B12": 66011,
+  "C12": 66003,
+  "D12": "ES 500 h",
+  "E12": 9,
+  "F12": "À confirmer",
+  "I12": "À confirmer",
+  "J12": "À confirmer",
+  "K12": "En service",
+  "M12": "Valeur invalide"
+ },
+ "type ≠ cycle (ES 500 h avec N° 3)": {
+  "A13": "Arroseur CAT",
+  "B13": 14840,
+  "C13": 14761,
+  "D13": "ES 500 h",
+  "E13": 3,
+  "F13": "À confirmer",
+  "I13": "À confirmer",
+  "J13": "À confirmer",
+  "K13": "En service",
+  "M13": "Type ≠ cycle"
+ },
+ "compteur vide sur engin en service": {
+  "A14": "Camion. Approvision Volvo",
+  "B14": null,
+  "C14": 11512,
+  "D14": "ES 250 h",
+  "E14": 3,
+  "F14": 11712,
+  "I14": "n.d.",
+  "J14": "À confirmer",
+  "K14": "En service",
+  "M14": "OK"
+ },
+ "compteur saisi en texte": {
+  "A17": "TERX2",
+  "B17": "2400",
+  "C17": 2192,
+  "D17": "ES 1000 h",
+  "E17": 4,
+  "F17": 2392,
+  "I17": "n.d.",
+  "J17": "À confirmer",
+  "K17": "En service",
+  "M17": "OK"
+ },
+ "N° cycle décimal (2,5)": {
+  "A18": "TERX3",
+  "B18": 25298,
+  "C18": 25044,
+  "D18": "ES 2000 h",
+  "E18": 2.5,
+  "F18": "À confirmer",
+  "I18": "À confirmer",
+  "J18": "À confirmer",
+  "K18": "En service",
+  "M18": "Valeur invalide"
+ },
+ "état vide": {
+  "A19": "TERX4",
+  "B19": 35048,
+  "C19": 35013,
+  "D19": "ES 500 h",
+  "E19": 6,
+  "F19": 35213,
+  "I19": -165,
+  "J19": "Normal",
+  "K19": null,
+  "M19": "OK"
+ },
+ "état en minuscules": {
+  "A20": "KOM1",
+  "B20": 19394,
+  "C20": 19151,
+  "D20": "ES 1000 h",
+  "E20": 4,
+  "F20": "—",
+  "I20": "—",
+  "J20": "Hors service",
+  "K20": "hors service",
+  "M20": "OK"
+ },
+ "doublon A15=KOM1 / A16=\"KOM2 \"": {
+  "J15": "Normal",
+  "MATCH KOM1 dans Engins_Plage (1re occurrence)": 8,
+  "COUNTIF KOM2 (sans espace)": 1
+ },
+ "H6 Liste_Engins": {
+  "ROWS(Liste_Engins) (51 engins non vides)": 50,
+  "NOUVEL ENGIN (A60) présent": 0,
+  "HELI 15T (A57) présent": 1,
+  "cellules vides incluses": 1
+ },
+ "KPI A3:F3": [
+  45,
+  33,
+  4,
+  2,
+  6,
+  5
+ ]
+}

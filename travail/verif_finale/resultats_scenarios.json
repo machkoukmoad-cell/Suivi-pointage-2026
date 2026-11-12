@@ -1,0 +1,98 @@
+[
+ {
+  "id": "T1",
+  "scenario": "Compteur au-delà de la cible → Dépassé",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; J8='Dépassé'; I8=15; KPI A3:G3=[45, 36, 4, 5, 0, 5, 1]; Tableau de bord rang 5='Port-Chars HP 21'"
+ },
+ {
+  "id": "T2",
+  "scenario": "Écart dans le seuil Proche (−13 h) et bornes −20 h / −21 h",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; J9='Proche'; I9=-13; J10 (écart −20)='Proche'; J11 (écart −21)='Normal'; KPI Proche=6"
+ },
+ {
+  "id": "T3",
+  "scenario": "Type ne correspondant pas au N° de cycle → « Type ≠ cycle »",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; M11='Type ≠ cycle'; J11='À confirmer'; Contrôles H9='Type ≠ cycle'; Total alertes=2; Tuile SUIVI_ES G3=2"
+ },
+ {
+  "id": "T4",
+  "scenario": "Compteur actuel vide sur engin en service → À confirmer",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; J12='À confirmer'; I12='n.d.'; Contrôles F10='Compteur actuel manquant ou non numérique'; KPI À confirmer=1; Tuile Tableau de bord À confirmer=1"
+ },
+ {
+  "id": "T5",
+  "scenario": "Nouvel engin en ligne libre (58) → listes et tableau de bord",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; J58='Normal'; F58=1100; KPI en service=46; ROWS(Liste_Engins)=51; dans Liste_Engins=1; dernier de Liste_Engins='ENGIN TEST V2'; Tableau de bord Camions/Normal=14; Tuile en service=46; Tuile sous-titre='sur 51 engins suivis'; HISTORIQUE_ES!A206 (bloc 51)='ENGIN TEST V2'; SUIVI_GRAISSAGE!A56='ENGIN TEST V2'; Contrôles alertes ligne 56=0; Total alertes=1"
+ },
+ {
+  "id": "T5b",
+  "scenario": "H6 : trou dans la colonne A + engin après des lignes vides → liste complète sans vide",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; ROWS(Liste_Engins)=50; engin après trou présent=1; vides dans la liste=0; Contrôles K28 (D11T4 vidé)='Ordre des lignes modifié (attendu : D11T4)'"
+ },
+ {
+  "id": "T6",
+  "scenario": "Entrée d'historique ne correspondant pas à SUIVI_ES → signalée dans Contrôles",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; Contrôles I7='SUIVI ≠ HISTORIQUE'; Contrôles O7 (dernier ES historisé)=15400; Total alertes=2; SUIVI_ES C9 inchangé=15313"
+ },
+ {
+  "id": "T6b",
+  "scenario": "Vidange exceptionnelle postérieure au dernier ES → pas de faux écart",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; Contrôles I6=None; Contrôles N6 (entrées)=4; Contrôles O6=6281; Total alertes=1"
+ },
+ {
+  "id": "T7",
+  "scenario": "Marge 50 → 30 : toutes les cibles se mettent à jour (+20 h)",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; F8 (6 281 + 220)=6501; lignes non conformes au recalcul Python=[]; Paramètres B18 avance effective=220; légende SUIVI_ES A4 actualisée=True; KPI=[45, 40, 1, 4, 0, 5, 1]"
+ },
+ {
+  "id": "T8",
+  "scenario": "Seuil_Proche 20 → 30 : D11T5 (−21 h) passe Proche",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; J31='Proche'; KPI Proche=9"
+ },
+ {
+  "id": "T9",
+  "scenario": "Date d'historique saisie en texte → signalée",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; Contrôles L8=\"Date d'historique invalide\""
+ },
+ {
+  "id": "T10",
+  "scenario": "Nom en double avec espace final (« KOM2 »)",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; Contrôles J14 (« KOM2 »)='Nom en double'; Contrôles J19 (KOM2)='Nom en double'"
+ },
+ {
+  "id": "T11",
+  "scenario": "Compteur actuel < dernier ES",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; J11='À confirmer'; Contrôles G9='Compteur < dernier ES'"
+ },
+ {
+  "id": "T12",
+  "scenario": "H1 : tri de SUIVI_ES → alertes « Ordre des lignes modifié »",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; positions signalées=50; Total alertes=53"
+ },
+ {
+  "id": "T13",
+  "scenario": "H1 : insertion de ligne dans SUIVI_ES → alertes",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs=0; Contrôles K18 (position 13)='Ordre des lignes modifié (attendu : KOM1)'; positions signalées=38"
+ },
+ {
+  "id": "T14",
+  "scenario": "H1 : suppression de ligne dans SUIVI_ES → alertes, Contrôles sans #REF!",
+  "resultat": "RÉUSSI",
+  "observations": "erreurs classeur=5 (attendues hors Contrôles) ; erreurs dans Contrôles=0; Contrôles K7 (position 2)='Ordre des lignes modifié (attendu : HP23)'; positions signalées=49; Total alertes numérique=51"
+ }
+]

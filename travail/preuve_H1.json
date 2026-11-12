@@ -1,0 +1,68 @@
+{
+ "insertion": {
+  "SUIVI_ES_A20": "NOUVEL ENGIN TEST",
+  "SUIVI_ES_A21": "KOM1",
+  "Engins_Plage_apres": "$SUIVI_ES.$A$8:$A$78",
+  "bloc_HIST_ligne54_nom": "KOM1",
+  "bloc_HIST_ligne54_formule": "=IF($SUIVI_ES.A21=\"\";\"\";$SUIVI_ES.A21)",
+  "nouvel_engin_a_un_bloc_HIST": false,
+  "nouvel_engin_a_une_ligne_GRAISS": false,
+  "Aller_KOM1_cible": "ligne 58 (bloc réel de KOM1 = ligne 54, nom affiché ligne 58 = KOM2)",
+  "derniere_formule_HIST_A282": "=IF($SUIVI_ES.A78=\"\";\"\";$SUIVI_ES.A78)"
+ },
+ "suppression": {
+  "bloc_HIST_ligne10_nom": "#REF!",
+  "bloc_HIST_ligne10_formule": "=IF($SUIVI_ES.A#REF!=\"\";\"\";$SUIVI_ES.A#REF!)",
+  "bloc_HIST_ligne10_ES1_compteur_orphelin": "14710",
+  "GRAISS_A7": "#REF!",
+  "GRAISS_A7_formule": "=IF($SUIVI_ES.$A#REF!=\"\";\"\";$SUIVI_ES.$A#REF!)",
+  "GRAISS_B7": "#REF!",
+  "GRAISS_F7": "#REF!",
+  "Liste_Engins": "OFFSET($SUIVI_ES.$A$8;0;0;MAX(1;COUNTA($SUIVI_ES.$A$8:$A$76));1)"
+ },
+ "tri": {
+  "premiers_noms_SUIVI_apres_tri": [
+   "UR132",
+   "UR131",
+   "CH994F2"
+  ],
+  "donnees_saisies_et_engin_affiche": [
+   {
+    "bloc_ligne": 6,
+    "nom_affiche_HIST_apres_tri": "UR132",
+    "HIST_ES1_compteur": "5970",
+    "GRAISS_ligne": 6,
+    "GRAISS_nom_apres_tri": "UR132",
+    "GRAISS_G_saisi": "",
+    "GRAISS_B": "66,011 h"
+   },
+   {
+    "bloc_ligne": 10,
+    "nom_affiche_HIST_apres_tri": "UR131",
+    "HIST_ES1_compteur": "14710",
+    "GRAISS_ligne": 7,
+    "GRAISS_nom_apres_tri": "UR131",
+    "GRAISS_G_saisi": "",
+    "GRAISS_B": "62,520 h"
+   },
+   {
+    "bloc_ligne": 14,
+    "nom_affiche_HIST_apres_tri": "CH994F2",
+    "HIST_ES1_compteur": "6007",
+    "GRAISS_ligne": 8,
+    "GRAISS_nom_apres_tri": "CH994F2",
+    "GRAISS_G_saisi": "",
+    "GRAISS_B": "55,165 h"
+   },
+   {
+    "bloc_ligne": 174,
+    "nom_affiche_HIST_apres_tri": "Magni",
+    "HIST_ES1_compteur": "",
+    "GRAISS_ligne": 48,
+    "GRAISS_nom_apres_tri": "Magni",
+    "GRAISS_G_saisi": "3,177 h",
+    "GRAISS_B": "1,488 h"
+   }
+  ]
+ }
+}

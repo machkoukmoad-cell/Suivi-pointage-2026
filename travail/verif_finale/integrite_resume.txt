@@ -1,0 +1,3 @@
+données utilisateur modifiées : 0
+formules non verrouillées : 0 | saisies verrouillées : 0 | feuilles protégées : 9 / 9
+logo : True | commentaires SUIVI_ES : ['I7', 'K7'] + Paramètres ['B16', 'B17']

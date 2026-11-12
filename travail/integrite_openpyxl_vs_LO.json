@@ -1,0 +1,1210 @@
+{
+ "donnees_utilisateur": {
+  "SUIVI_ES A:E,K,L (8-77)": {
+   "cellules_comparees": 490,
+   "non_vides": 333,
+   "differences": {}
+  },
+  "HISTORIQUE_ES C:AP (6-285)": {
+   "cellules_comparees": 11200,
+   "non_vides": 28,
+   "differences": {}
+  },
+  "SUIVI_GRAISSAGE C:E,G (6-75)": {
+   "cellules_comparees": 280,
+   "non_vides": 1,
+   "differences": {}
+  },
+  "HIST_GRAISSAGE C:BJ (6-215)": {
+   "cellules_comparees": 12600,
+   "non_vides": 0,
+   "differences": {}
+  },
+  "Libellés HISTORIQUE_ES B / formules A": {
+   "cellules_comparees": 560,
+   "non_vides": 350,
+   "differences": {}
+  },
+  "Formules SUIVI_GRAISSAGE A,B,F": {
+   "cellules_comparees": 210,
+   "non_vides": 210,
+   "differences": {}
+  },
+  "feuilles_d_origine_presentes": true,
+  "HISTORIQUE_ES_cellules_saisies": 28
+ },
+ "structure": {
+  "Mode d'emploi": {
+   "validations": {
+    "V1.1": 0,
+    "V2": 0,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "mfc": {
+    "V1.1": 0,
+    "V2": 0,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "fusions": {
+    "V1.1": 6,
+    "V2": 6,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    null,
+    null
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    null,
+    null
+   ],
+   "titres_impression": [
+    [
+     null,
+     null
+    ],
+    [
+     null,
+     null
+    ]
+   ]
+  },
+  "Tableau de bord": {
+   "validations": {
+    "V1.1": 0,
+    "V2": 0,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "mfc": {
+    "V1.1": 9,
+    "V2": 9,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "fusions": {
+    "V1.1": 86,
+    "V2": 86,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    null,
+    null
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    null,
+    null
+   ],
+   "titres_impression": [
+    [
+     null,
+     null
+    ],
+    [
+     null,
+     null
+    ]
+   ]
+  },
+  "SUIVI_ES": {
+   "validations": {
+    "V1.1": 6,
+    "V2": 6,
+    "retirees": [
+     [
+      "B8:B77",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      true,
+      "Compteur actuel (h)"
+     ],
+     [
+      "C8:C77",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      true,
+      "Dernier ES — compteur (h)"
+     ],
+     [
+      "D8:D77",
+      "list",
+      "=Types_ES",
+      null,
+      null,
+      true,
+      "Dernier ES — Type"
+     ],
+     [
+      "E8:E77",
+      "whole",
+      "1",
+      "Longueur_cycle",
+      null,
+      true,
+      "N° de cycle (1 à 8, voir Paramètres)"
+     ],
+     [
+      "K8:K77",
+      "list",
+      "\"En service,Hors service\"",
+      null,
+      null,
+      true,
+      "État de l'engin"
+     ],
+     [
+      "L8:L77",
+      "list",
+      "=Liste_Categories",
+      null,
+      "warning",
+      true,
+      "Catégorie"
+     ]
+    ],
+    "ajoutees": [
+     [
+      "B8:B77",
+      "decimal",
+      "0",
+      "999999",
+      "stop",
+      true,
+      "Compteur actuel (h)"
+     ],
+     [
+      "C8:C77",
+      "decimal",
+      "0",
+      "999999",
+      "stop",
+      true,
+      "Dernier ES — compteur (h)"
+     ],
+     [
+      "D8:D77",
+      "list",
+      "Types_ES",
+      "0",
+      "stop",
+      true,
+      "Dernier ES — Type"
+     ],
+     [
+      "E8:E77",
+      "whole",
+      "1",
+      "Longueur_cycle",
+      "stop",
+      true,
+      "N° de cycle (1 à 8, voir Paramètres)"
+     ],
+     [
+      "K8:K77",
+      "list",
+      "\"En service,Hors service\"",
+      "0",
+      "stop",
+      true,
+      "État de l'engin"
+     ],
+     [
+      "L8:L77",
+      "list",
+      "Liste_Categories",
+      "0",
+      "warning",
+      true,
+      "Catégorie"
+     ]
+    ]
+   },
+   "mfc": {
+    "V1.1": 20,
+    "V2": 20,
+    "retirees": [
+     "A8:A77 AND($A8<>\"\",N(INDEX('Contrôles'!$M$6:$M$75,ROW()-ROW($A$7)))>0)",
+     "A8:K77 $K8=\"Hors service\"",
+     "C8:E77 AND($M8=\"Incomplet\",C8=\"\")",
+     "C8:E77 AND($M8=\"Valeur invalide\",C8<>\"\")",
+     "D8:E77 $M8=\"Type ≠ cycle\"",
+     "G3 $G$3=0",
+     "I8:I77 AND(ISNUMBER($I8),$I8<-Seuil_Proche)",
+     "I8:I77 AND(ISNUMBER($I8),$I8>0)",
+     "I8:I77 AND(ISNUMBER($I8),$I8>=-Seuil_Proche,$I8<=0)",
+     "J8:J77 $J8=\"Dépassé\"",
+     "J8:J77 $J8=\"Normal\"",
+     "J8:J77 $J8=\"Proche\""
+    ],
+    "ajoutees": [
+     "A8:A77 AND($A8<>\"\",N(INDEX(Contrôles!$M$6:$M$75,ROW()-ROW($A$7)))>0)",
+     "A8:K77 $K8=\"Hors service\"",
+     "C8:E77 AND($M8=\"Incomplet\",C8=\"\")",
+     "C8:E77 AND($M8=\"Valeur invalide\",C8<>\"\")",
+     "D8:E77 $M8=\"Type ≠ cycle\"",
+     "G3 $G$3=0",
+     "I8:I77 AND(ISNUMBER($I8),$I8<-Seuil_Proche)",
+     "I8:I77 AND(ISNUMBER($I8),$I8>0)",
+     "I8:I77 AND(ISNUMBER($I8),$I8>=-Seuil_Proche,$I8<=0)",
+     "J8:J77 $J8=\"Dépassé\"",
+     "J8:J77 $J8=\"Normal\"",
+     "J8:J77 $J8=\"Proche\""
+    ]
+   },
+   "fusions": {
+    "V1.1": 10,
+    "V2": 10,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "B8",
+    "B8"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    1,
+    1
+   ],
+   "commentaires": {
+    "V1.1": [
+     "I7",
+     "K7"
+    ],
+    "V2": [
+     "I7",
+     "K7"
+    ],
+    "texte_modifie": []
+   },
+   "filtre": [
+    "A7:M77",
+    "A7:M77"
+   ],
+   "titres_impression": [
+    [
+     "$6:$7",
+     null
+    ],
+    [
+     "$6:$7",
+     null
+    ]
+   ]
+  },
+  "SUIVI_GRAISSAGE_SOUFFLAGE": {
+   "validations": {
+    "V1.1": 4,
+    "V2": 4,
+    "retirees": [
+     [
+      "D6:D75",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      false,
+      null
+     ],
+     [
+      "E6:E75",
+      "list",
+      "\"Avec ES,Normal\"",
+      null,
+      null,
+      false,
+      null
+     ],
+     [
+      "G6:G75",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      true,
+      "Compteur actuel (hors service)"
+     ]
+    ],
+    "ajoutees": [
+     [
+      "D6:D75",
+      "decimal",
+      "0",
+      "999999",
+      "stop",
+      false,
+      null
+     ],
+     [
+      "E6:E75",
+      "list",
+      "\"Avec ES,Normal\"",
+      "0",
+      "stop",
+      false,
+      null
+     ],
+     [
+      "G6:G75",
+      "decimal",
+      "0",
+      "999999",
+      "stop",
+      true,
+      "Compteur actuel (hors service)"
+     ]
+    ]
+   },
+   "mfc": {
+    "V1.1": 7,
+    "V2": 7,
+    "retirees": [
+     "A6:B75 $F6=\"Hors service\"",
+     "C6:E75 AND($A6<>\"\",$E6=\"Avec ES\")",
+     "C6:E75 AND($A6<>\"\",$E6=\"Normal\")",
+     "F6:F75 $F6=\"Hors service\"",
+     "G6:G75 $F6=\"Hors service\"",
+     "G6:G75 AND($F6<>\"Hors service\",$G6<>\"\")"
+    ],
+    "ajoutees": [
+     "A6:B75 $F6=\"Hors service\"",
+     "C6:E75 AND($A6<>\"\",$E6=\"Avec ES\")",
+     "C6:E75 AND($A6<>\"\",$E6=\"Normal\")",
+     "F6:F75 $F6=\"Hors service\"",
+     "G6:G75 $F6=\"Hors service\"",
+     "G6:G75 AND($F6<>\"Hors service\",$G6<>\"\")"
+    ]
+   },
+   "fusions": {
+    "V1.1": 5,
+    "V2": 5,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "B6",
+    "B6"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    "A5:G75",
+    "A5:G75"
+   ],
+   "titres_impression": [
+    [
+     "$4:$5",
+     null
+    ],
+    [
+     "$4:$5",
+     null
+    ]
+   ]
+  },
+  "HISTORIQUE_ES": {
+   "validations": {
+    "V1.1": 5,
+    "V2": 5,
+    "retirees": [
+     [
+      "C6:AP6 C10:AP10 C14:AP14 C18:AP18 C22:AP22 C26:AP26 C30:AP30 C34:AP34 C38:AP38 C42:AP42 C46:AP46 C50:AP50 C54:AP54 C58:AP58 C62:AP62 C66:AP66 C70:AP70 C74:AP74 C78:AP78 C82:AP82 C86:AP86 C90:AP90 C94:AP94 C98:AP98 C102:AP102 C106:AP106 C110:AP110 C114:AP114 C118:AP118 C122:AP122 C126:AP126 C130:AP130 C134:AP134 C138:AP138 C142:AP142 C146:AP146 C150:AP150 C154:AP154 C158:AP158 C162:AP162 C166:AP166 C170:AP170 C174:AP174 C178:AP178 C182:AP182 C186:AP186 C190:AP190 C194:AP194 C198:AP198 C202:AP202 C206:AP206 C210:AP210 C214:AP214 C218:AP218 C222:AP222 C226:AP226 C230:AP230 C234:AP234 C238:AP238 C242:AP242 C246:AP246 C250:AP250 C254:AP254 C258:AP258 C262:AP262 C266:AP266 C270:AP270 C274:AP274 C278:AP278 C282:AP282",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      false,
+      null
+     ],
+     [
+      "C8:AP8 C12:AP12 C16:AP16 C20:AP20 C24:AP24 C28:AP28 C32:AP32 C36:AP36 C40:AP40 C44:AP44 C48:AP48 C52:AP52 C56:AP56 C60:AP60 C64:AP64 C68:AP68 C72:AP72 C76:AP76 C80:AP80 C84:AP84 C88:AP88 C92:AP92 C96:AP96 C100:AP100 C104:AP104 C108:AP108 C112:AP112 C116:AP116 C120:AP120 C124:AP124 C128:AP128 C132:AP132 C136:AP136 C140:AP140 C144:AP144 C148:AP148 C152:AP152 C156:AP156 C160:AP160 C164:AP164 C168:AP168 C172:AP172 C176:AP176 C180:AP180 C184:AP184 C188:AP188 C192:AP192 C196:AP196 C200:AP200 C204:AP204 C208:AP208 C212:AP212 C216:AP216 C220:AP220 C224:AP224 C228:AP228 C232:AP232 C236:AP236 C240:AP240 C244:AP244 C248:AP248 C252:AP252 C256:AP256 C260:AP260 C264:AP264 C268:AP268 C272:AP272 C276:AP276 C280:AP280 C284:AP284",
+      "list",
+      "=Types_Historique",
+      null,
+      null,
+      false,
+      null
+     ],
+     [
+      "C9:AP9 C13:AP13 C17:AP17 C21:AP21 C25:AP25 C29:AP29 C33:AP33 C37:AP37 C41:AP41 C45:AP45 C49:AP49 C53:AP53 C57:AP57 C61:AP61 C65:AP65 C69:AP69 C73:AP73 C77:AP77 C81:AP81 C85:AP85 C89:AP89 C93:AP93 C97:AP97 C101:AP101 C105:AP105 C109:AP109 C113:AP113 C117:AP117 C121:AP121 C125:AP125 C129:AP129 C133:AP133 C137:AP137 C141:AP141 C145:AP145 C149:AP149 C153:AP153 C157:AP157 C161:AP161 C165:AP165 C169:AP169 C173:AP173 C177:AP177 C181:AP181 C185:AP185 C189:AP189 C193:AP193 C197:AP197 C201:AP201 C205:AP205 C209:AP209 C213:AP213 C217:AP217 C221:AP221 C225:AP225 C229:AP229 C233:AP233 C237:AP237 C241:AP241 C245:AP245 C249:AP249 C253:AP253 C257:AP257 C261:AP261 C265:AP265 C269:AP269 C273:AP273 C277:AP277 C281:AP281 C285:AP285",
+      "whole",
+      "1",
+      "Longueur_cycle",
+      null,
+      false,
+      null
+     ],
+     [
+      "I1:K1",
+      "list",
+      "=Liste_Engins",
+      null,
+      null,
+      true,
+      "Aller à l'engin"
+     ]
+    ],
+    "ajoutees": [
+     [
+      "C6:AP6 C10:AP10 C14:AP14 C18:AP18 C22:AP22 C26:AP26 C30:AP30 C34:AP34 C38:AP38 C42:AP42 C46:AP46 C50:AP50 C54:AP54 C58:AP58 C62:AP62 C66:AP66 C70:AP70 C74:AP74 C78:AP78 C82:AP82 C86:AP86 C90:AP90 C94:AP94 C98:AP98 C102:AP102 C106:AP106 C110:AP110 C114:AP114 C118:AP118 C122:AP122 C126:AP126 C130:AP130 C134:AP134 C138:AP138 C142:AP142 C146:AP146 C150:AP150 C154:AP154 C158:AP158 C162:AP162 C166:AP166 C170:AP170 C174:AP174 C178:AP178 C182:AP182 C186:AP186 C190:AP190 C194:AP194 C198:AP198 C202:AP202 C206:AP206 C210:AP210 C214:AP214 C218:AP218 C222:AP222 C226:AP226 C230:AP230 C234:AP234 C238:AP238 C242:AP242 C246:AP246 C250:AP250 C254:AP254 C258:AP258 C262:AP262 C266:AP266 C270:AP270 C274:AP274 C278:AP278 C282:AP282",
+      "decimal",
+      "0",
+      "999999",
+      "stop",
+      false,
+      null
+     ],
+     [
+      "C8:AP8 C12:AP12 C16:AP16 C20:AP20 C24:AP24 C28:AP28 C32:AP32 C36:AP36 C40:AP40 C44:AP44 C48:AP48 C52:AP52 C56:AP56 C60:AP60 C64:AP64 C68:AP68 C72:AP72 C76:AP76 C80:AP80 C84:AP84 C88:AP88 C92:AP92 C96:AP96 C100:AP100 C104:AP104 C108:AP108 C112:AP112 C116:AP116 C120:AP120 C124:AP124 C128:AP128 C132:AP132 C136:AP136 C140:AP140 C144:AP144 C148:AP148 C152:AP152 C156:AP156 C160:AP160 C164:AP164 C168:AP168 C172:AP172 C176:AP176 C180:AP180 C184:AP184 C188:AP188 C192:AP192 C196:AP196 C200:AP200 C204:AP204 C208:AP208 C212:AP212 C216:AP216 C220:AP220 C224:AP224 C228:AP228 C232:AP232 C236:AP236 C240:AP240 C244:AP244 C248:AP248 C252:AP252 C256:AP256 C260:AP260 C264:AP264 C268:AP268 C272:AP272 C276:AP276 C280:AP280 C284:AP284",
+      "list",
+      "Types_Historique",
+      "0",
+      "stop",
+      false,
+      null
+     ],
+     [
+      "C9:AP9 C13:AP13 C17:AP17 C21:AP21 C25:AP25 C29:AP29 C33:AP33 C37:AP37 C41:AP41 C45:AP45 C49:AP49 C53:AP53 C57:AP57 C61:AP61 C65:AP65 C69:AP69 C73:AP73 C77:AP77 C81:AP81 C85:AP85 C89:AP89 C93:AP93 C97:AP97 C101:AP101 C105:AP105 C109:AP109 C113:AP113 C117:AP117 C121:AP121 C125:AP125 C129:AP129 C133:AP133 C137:AP137 C141:AP141 C145:AP145 C149:AP149 C153:AP153 C157:AP157 C161:AP161 C165:AP165 C169:AP169 C173:AP173 C177:AP177 C181:AP181 C185:AP185 C189:AP189 C193:AP193 C197:AP197 C201:AP201 C205:AP205 C209:AP209 C213:AP213 C217:AP217 C221:AP221 C225:AP225 C229:AP229 C233:AP233 C237:AP237 C241:AP241 C245:AP245 C249:AP249 C253:AP253 C257:AP257 C261:AP261 C265:AP265 C269:AP269 C273:AP273 C277:AP277 C281:AP281 C285:AP285",
+      "whole",
+      "1",
+      "Longueur_cycle",
+      "stop",
+      false,
+      null
+     ],
+     [
+      "I1:K1",
+      "list",
+      "Liste_Engins",
+      "0",
+      "stop",
+      true,
+      "Aller à l'engin"
+     ]
+    ]
+   },
+   "mfc": {
+    "V1.1": 14,
+    "V2": 14,
+    "retirees": [
+     "C6:AP285 AND(MOD(ROW()-6,4)=1,C6<>\"\",OR(ISTEXT(C6),N(C6)>TODAY()))",
+     "C6:AP285 AND(MOD(ROW()-6,4)=3,C6<>\"\",IFERROR(INDEX(C$1:C$290,ROW()-1)<>INDEX(Cycle_Types,C6),TRUE))",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-"
+    ],
+    "ajoutees": [
+     "C6:AP285 AND(MOD(ROW()-6,4)=1,C6<>\"\",OR(ISTEXT(C6),N(C6)>TODAY()))",
+     "C6:AP285 AND(MOD(ROW()-6,4)=3,C6<>\"\",IFERROR(INDEX(C$1:C$290,ROW()-1)<>INDEX(Cycle_Types,C6),1))",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-",
+     "C6:AP285 IFERROR(AND(MOD(ROW()-6,4)=3,ISNUMBER(C6),IF(ISNUMBER(INDEX($A$1:$AP$290,(ROW()-MOD(ROW()-"
+    ]
+   },
+   "fusions": {
+    "V1.1": 78,
+    "V2": 78,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "C6",
+    "C6"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    null,
+    null
+   ],
+   "titres_impression": [
+    [
+     "$5:$5",
+     "$A:$B"
+    ],
+    [
+     "$5:$5",
+     "$A:$B"
+    ]
+   ]
+  },
+  "HISTORIQUE_GRAISSAGE_SOUFFLAGE": {
+   "validations": {
+    "V1.1": 4,
+    "V2": 4,
+    "retirees": [
+     [
+      "C6:BJ6 C9:BJ9 C12:BJ12 C15:BJ15 C18:BJ18 C21:BJ21 C24:BJ24 C27:BJ27 C30:BJ30 C33:BJ33 C36:BJ36 C39:BJ39 C42:BJ42 C45:BJ45 C48:BJ48 C51:BJ51 C54:BJ54 C57:BJ57 C60:BJ60 C63:BJ63 C66:BJ66 C69:BJ69 C72:BJ72 C75:BJ75 C78:BJ78 C81:BJ81 C84:BJ84 C87:BJ87 C90:BJ90 C93:BJ93 C96:BJ96 C99:BJ99 C102:BJ102 C105:BJ105 C108:BJ108 C111:BJ111 C114:BJ114 C117:BJ117 C120:BJ120 C123:BJ123 C126:BJ126 C129:BJ129 C132:BJ132 C135:BJ135 C138:BJ138 C141:BJ141 C144:BJ144 C147:BJ147 C150:BJ150 C153:BJ153 C156:BJ156 C159:BJ159 C162:BJ162 C165:BJ165 C168:BJ168 C171:BJ171 C174:BJ174 C177:BJ177 C180:BJ180 C183:BJ183 C186:BJ186 C189:BJ189 C192:BJ192 C195:BJ195 C198:BJ198 C201:BJ201 C204:BJ204 C207:BJ207 C210:BJ210 C213:BJ213",
+      "decimal",
+      "0",
+      "999999",
+      null,
+      false,
+      null
+     ],
+     [
+      "C8:BJ8 C11:BJ11 C14:BJ14 C17:BJ17 C20:BJ20 C23:BJ23 C26:BJ26 C29:BJ29 C32:BJ32 C35:BJ35 C38:BJ38 C41:BJ41 C44:BJ44 C47:BJ47 C50:BJ50 C53:BJ53 C56:BJ56 C59:BJ59 C62:BJ62 C65:BJ65 C68:BJ68 C71:BJ71 C74:BJ74 C77:BJ77 C80:BJ80 C83:BJ83 C86:BJ86 C89:BJ89 C92:BJ92 C95:BJ95 C98:BJ98 C101:BJ101 C104:BJ104 C107:BJ107 C110:BJ110 C113:BJ113 C116:BJ116 C119:BJ119 C122:BJ122 C125:BJ125 C128:BJ128 C131:BJ131 C134:BJ134 C137:BJ137 C140:BJ140 C143:BJ143 C146:BJ146 C149:BJ149 C152:BJ152 C155:BJ155 C158:BJ158 C161:BJ161 C164:BJ164 C167:BJ167 C170:BJ170 C173:BJ173 C176:BJ176 C179:BJ179 C182:BJ182 C185:BJ185 C188:BJ188 C191:BJ191 C194:BJ194 C197:BJ197 C200:BJ200 C203:BJ203 C206:BJ206 C209:BJ209 C212:BJ212 C215:BJ215",
+      "list",
+      "\"Avec ES,Normal\"",
+      null,
+      null,
+      false,
+      null
+     ],
+     [
+      "I1:K1",
+      "list",
+      "=Liste_Engins",
+      null,
+      null,
+      true,
+      "Aller à l'engin"
+     ]
+    ],
+    "ajoutees": [
+     [
+      "C6:BJ6 C9:BJ9 C12:BJ12 C15:BJ15 C18:BJ18 C21:BJ21 C24:BJ24 C27:BJ27 C30:BJ30 C33:BJ33 C36:BJ36 C39:BJ39 C42:BJ42 C45:BJ45 C48:BJ48 C51:BJ51 C54:BJ54 C57:BJ57 C60:BJ60 C63:BJ63 C66:BJ66 C69:BJ69 C72:BJ72 C75:BJ75 C78:BJ78 C81:BJ81 C84:BJ84 C87:BJ87 C90:BJ90 C93:BJ93 C96:BJ96 C99:BJ99 C102:BJ102 C105:BJ105 C108:BJ108 C111:BJ111 C114:BJ114 C117:BJ117 C120:BJ120 C123:BJ123 C126:BJ126 C129:BJ129 C132:BJ132 C135:BJ135 C138:BJ138 C141:BJ141 C144:BJ144 C147:BJ147 C150:BJ150 C153:BJ153 C156:BJ156 C159:BJ159 C162:BJ162 C165:BJ165 C168:BJ168 C171:BJ171 C174:BJ174 C177:BJ177 C180:BJ180 C183:BJ183 C186:BJ186 C189:BJ189 C192:BJ192 C195:BJ195 C198:BJ198 C201:BJ201 C204:BJ204 C207:BJ207 C210:BJ210 C213:BJ213",
+      "decimal",
+      "0",
+      "999999",
+      "stop",
+      false,
+      null
+     ],
+     [
+      "C8:BJ8 C11:BJ11 C14:BJ14 C17:BJ17 C20:BJ20 C23:BJ23 C26:BJ26 C29:BJ29 C32:BJ32 C35:BJ35 C38:BJ38 C41:BJ41 C44:BJ44 C47:BJ47 C50:BJ50 C53:BJ53 C56:BJ56 C59:BJ59 C62:BJ62 C65:BJ65 C68:BJ68 C71:BJ71 C74:BJ74 C77:BJ77 C80:BJ80 C83:BJ83 C86:BJ86 C89:BJ89 C92:BJ92 C95:BJ95 C98:BJ98 C101:BJ101 C104:BJ104 C107:BJ107 C110:BJ110 C113:BJ113 C116:BJ116 C119:BJ119 C122:BJ122 C125:BJ125 C128:BJ128 C131:BJ131 C134:BJ134 C137:BJ137 C140:BJ140 C143:BJ143 C146:BJ146 C149:BJ149 C152:BJ152 C155:BJ155 C158:BJ158 C161:BJ161 C164:BJ164 C167:BJ167 C170:BJ170 C173:BJ173 C176:BJ176 C179:BJ179 C182:BJ182 C185:BJ185 C188:BJ188 C191:BJ191 C194:BJ194 C197:BJ197 C200:BJ200 C203:BJ203 C206:BJ206 C209:BJ209 C212:BJ212 C215:BJ215",
+      "list",
+      "\"Avec ES,Normal\"",
+      "0",
+      "stop",
+      false,
+      null
+     ],
+     [
+      "I1:K1",
+      "list",
+      "Liste_Engins",
+      "0",
+      "stop",
+      true,
+      "Aller à l'engin"
+     ]
+    ]
+   },
+   "mfc": {
+    "V1.1": 3,
+    "V2": 3,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "fusions": {
+    "V1.1": 74,
+    "V2": 74,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "C6",
+    "C6"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    null,
+    null
+   ],
+   "titres_impression": [
+    [
+     "$5:$5",
+     "$A:$B"
+    ],
+    [
+     "$5:$5",
+     "$A:$B"
+    ]
+   ]
+  },
+  "Contrôles": {
+   "validations": {
+    "V1.1": 0,
+    "V2": 0,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "mfc": {
+    "V1.1": 8,
+    "V2": 8,
+    "retirees": [
+     "D3 $D$3=0"
+    ],
+    "ajoutees": [
+     "D3 $D$3=0"
+    ]
+   },
+   "fusions": {
+    "V1.1": 7,
+    "V2": 7,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "D6",
+    "D6"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    "A5:R75",
+    "A5:R75"
+   ],
+   "titres_impression": [
+    [
+     "$5:$5",
+     null
+    ],
+    [
+     "$5:$5",
+     null
+    ]
+   ]
+  },
+  "Paramètres": {
+   "validations": {
+    "V1.1": 4,
+    "V2": 4,
+    "retirees": [
+     [
+      "B16",
+      "decimal",
+      "0",
+      "100000",
+      null,
+      true,
+      "Marge"
+     ],
+     [
+      "B17",
+      "decimal",
+      "1",
+      "100000",
+      null,
+      true,
+      "Intervalle ES"
+     ],
+     [
+      "B19",
+      "decimal",
+      "0",
+      "100000",
+      null,
+      true,
+      "Seuil Proche"
+     ],
+     [
+      "B5:B12",
+      "list",
+      "=Types_ES",
+      null,
+      null,
+      false,
+      null
+     ]
+    ],
+    "ajoutees": [
+     [
+      "B16",
+      "decimal",
+      "0",
+      "100000",
+      "stop",
+      true,
+      "Marge"
+     ],
+     [
+      "B17",
+      "decimal",
+      "1",
+      "100000",
+      "stop",
+      true,
+      "Intervalle ES"
+     ],
+     [
+      "B19",
+      "decimal",
+      "0",
+      "100000",
+      "stop",
+      true,
+      "Seuil Proche"
+     ],
+     [
+      "B5:B12",
+      "list",
+      "Types_ES",
+      "0",
+      "stop",
+      false,
+      null
+     ]
+    ]
+   },
+   "mfc": {
+    "V1.1": 2,
+    "V2": 2,
+    "retirees": [
+     "B44 $B$44=0",
+     "B44 $B$44>0"
+    ],
+    "ajoutees": [
+     "B44 $B$44=0",
+     "B44 $B$44>0"
+    ]
+   },
+   "fusions": {
+    "V1.1": 7,
+    "V2": 7,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "A4",
+    "A4"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [
+     "B16",
+     "B17"
+    ],
+    "V2": [
+     "B16",
+     "B17"
+    ],
+    "texte_modifie": []
+   },
+   "filtre": [
+    null,
+    null
+   ],
+   "titres_impression": [
+    [
+     null,
+     null
+    ],
+    [
+     null,
+     null
+    ]
+   ]
+  },
+  "Journal des modifications": {
+   "validations": {
+    "V1.1": 0,
+    "V2": 0,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "mfc": {
+    "V1.1": 0,
+    "V2": 0,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "fusions": {
+    "V1.1": 2,
+    "V2": 2,
+    "retirees": [],
+    "ajoutees": []
+   },
+   "volets": [
+    "A5",
+    "A5"
+   ],
+   "protection": {
+    "V1.1": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    },
+    "V2": {
+     "sheet": true,
+     "password": null,
+     "sort": true,
+     "autoFilter": false,
+     "insertRows": true,
+     "deleteRows": true,
+     "formatColumns": false,
+     "formatRows": false,
+     "formatCells": true
+    }
+   },
+   "images": [
+    0,
+    0
+   ],
+   "commentaires": {
+    "V1.1": [],
+    "V2": [],
+    "texte_modifie": []
+   },
+   "filtre": [
+    "A4:E41",
+    "A4:E41"
+   ],
+   "titres_impression": [
+    [
+     "$4:$4",
+     null
+    ],
+    [
+     "$4:$4",
+     null
+    ]
+   ]
+  },
+  "Paramètres_commentaires": {
+   "B16": "Marge de 50 h (cahier des charges), retranchée une seule foi",
+   "B17": "250 h entre deux ES consécutifs, quel que soit le type (8 × "
+  },
+  "logo_sha256": {
+   "V1.1": {
+    "xl/media/image1.png": "d43517cd0d6491bf"
+   },
+   "V2": {
+    "xl/media/image1.png": "d43517cd0d6491bf"
+   }
+  },
+  "logo_ancrage": [
+   [
+    "TwoCellAnchor",
+    0,
+    0,
+    298,
+    162
+   ]
+  ],
+  "noms_definis": {
+   "V1.1": {
+    "Engins_Plage": "SUIVI_ES!$A$8:$A$77",
+    "Cycle_Types": "'Paramètres'!$B$5:$B$12",
+    "Longueur_cycle": "'Paramètres'!$B$13",
+    "Marge": "'Paramètres'!$B$16",
+    "Interv_ES": "'Paramètres'!$B$17",
+    "Seuil_Proche": "'Paramètres'!$B$19",
+    "Types_ES": "'Paramètres'!$B$23:$B$26",
+    "Types_Historique": "'Paramètres'!$B$23:$B$27",
+    "Type_Hors_Cycle": "'Paramètres'!$B$27",
+    "Nb_Categories": "'Paramètres'!$B$38",
+    "Liste_Categories": "'Paramètres'!$B$30:INDEX('Paramètres'!$B$30:$B$37,MAX(1,'Paramètres'!$B$38))",
+    "Controle_Parametres": "'Paramètres'!$B$44",
+    "Liste_Engins": "'Contrôles'!$V$6:INDEX('Contrôles'!$V$6:$V$75,MAX(1,COUNT('Contrôles'!$U$6:$U$75)))",
+    "Total_Alertes": "'Contrôles'!$D$3"
+   },
+   "V2": {
+    "Controle_Parametres": "Paramètres!$B$44",
+    "Cycle_Types": "Paramètres!$B$5:$B$12",
+    "Engins_Plage": "SUIVI_ES!$A$8:$A$77",
+    "Interv_ES": "Paramètres!$B$17",
+    "Liste_Categories": "Paramètres!$B$30:INDEX(Paramètres!$B$30:$B$37,MAX(1,Paramètres!$B$38))",
+    "Liste_Engins": "Contrôles!$V$6:INDEX(Contrôles!$V$6:$V$75,MAX(1,COUNT(Contrôles!$U$6:$U$75)))",
+    "Longueur_cycle": "Paramètres!$B$13",
+    "Marge": "Paramètres!$B$16",
+    "Nb_Categories": "Paramètres!$B$38",
+    "Seuil_Proche": "Paramètres!$B$19",
+    "Total_Alertes": "Contrôles!$D$3",
+    "Types_ES": "Paramètres!$B$23:$B$26",
+    "Types_Historique": "Paramètres!$B$23:$B$27",
+    "Type_Hors_Cycle": "Paramètres!$B$27"
+   }
+  }
+ },
+ "verrouillage": {
+  "cellules_formule": 2793,
+  "formules_non_verrouillees": [],
+  "saisies_verrouillees": [],
+  "HISTORIQUE_ES_saisies_verrouillees": 0,
+  "feuilles_protegees": {
+   "Mode d'emploi": true,
+   "Tableau de bord": true,
+   "SUIVI_ES": true,
+   "SUIVI_GRAISSAGE_SOUFFLAGE": true,
+   "HISTORIQUE_ES": true,
+   "HISTORIQUE_GRAISSAGE_SOUFFLAGE": true,
+   "Contrôles": true,
+   "Paramètres": true,
+   "Journal des modifications": true
+  },
+  "mot_de_passe": {
+   "Mode d'emploi": null,
+   "Tableau de bord": null,
+   "SUIVI_ES": null,
+   "SUIVI_GRAISSAGE_SOUFFLAGE": null,
+   "HISTORIQUE_ES": null,
+   "HISTORIQUE_GRAISSAGE_SOUFFLAGE": null,
+   "Contrôles": null,
+   "Paramètres": null,
+   "Journal des modifications": null
+  }
+ }
+}

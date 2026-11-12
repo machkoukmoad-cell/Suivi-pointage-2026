@@ -1,0 +1,2 @@
+formules avec fonctions non Excel 2016 : 0 []
+macros (vba) : False
